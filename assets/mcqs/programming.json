@@ -1,0 +1,452 @@
+[
+  {
+    "id": 1,
+    "question": "You are developing a financial application that calculates monthly compound interest. During testing, you notice that a calculated value of $100.05 is sometimes stored as $100.04999999. Which data type is most likely being misused, and what should be used instead in languages like Java or C#?",
+    "options": [
+      "Using int instead of long",
+      "Using double/float instead of BigDecimal/decimal",
+      "Using String instead of double",
+      "Using boolean instead of float"
+    ],
+    "correctIndex": 1,
+    "explanation": "Standard floating-point types (float, double) use base-2 binary fractions and cannot represent base-10 decimals precisely, leading to rounding errors. Financial calculations should use arbitrary-precision types like BigDecimal (Java) or decimal (C#).",
+    "difficulty": "medium",
+    "topic": "Data Types",
+    "category": "Programming"
+  },
+  {
+    "id": 2,
+    "question": "Analyze the following code snippet:\n```java\nint x = 5;\nint y = ++x * 2;\nSystem.out.println(y);\n```\nWhat will be the output when this code is executed?",
+    "options": [
+      "10",
+      "11",
+      "12",
+      "Compiler Error"
+    ],
+    "correctIndex": 2,
+    "explanation": "The prefix increment `++x` increases the value of x to 6 before the multiplication is evaluated. Therefore, the expression becomes 6 * 2, which results in 12.",
+    "difficulty": "easy",
+    "topic": "Operators",
+    "category": "Programming"
+  },
+  {
+    "id": 3,
+    "question": "A team is building a library system. There is a base class `Document` with a method `printDetails()`. The subclasses `Book` and `Magazine` both provide their own specific implementation of `printDetails()`. At runtime, the program calls `printDetails()` on a list of `Document` references, and the correct specific method is executed for each item. What Object-Oriented concept does this represent?",
+    "options": [
+      "Encapsulation",
+      "Compile-time Polymorphism (Overloading)",
+      "Runtime Polymorphism (Overriding)",
+      "Multiple Inheritance"
+    ],
+    "correctIndex": 2,
+    "explanation": "This is Runtime Polymorphism (Method Overriding). The specific method implementation to call is determined at runtime based on the actual object type (Book or Magazine), even though the reference type is the parent class (Document).",
+    "difficulty": "medium",
+    "topic": "OOP",
+    "category": "Programming"
+  },
+  {
+    "id": 4,
+    "question": "When designing an API client, you want to ensure that a network connection class cannot be directly instantiated from outside the class, and only a single shared instance of the connection is ever created. Which design pattern and access modifier combination should you use?",
+    "options": [
+      "Factory Pattern with public constructors",
+      "Singleton Pattern with a private constructor",
+      "Observer Pattern with protected constructors",
+      "Builder Pattern with a package-private constructor"
+    ],
+    "correctIndex": 1,
+    "explanation": "The Singleton pattern ensures that a class has only one instance and provides a global point of access to it. This is implemented by making the constructor private, preventing direct instantiation.",
+    "difficulty": "hard",
+    "topic": "OOP",
+    "category": "Programming"
+  },
+  {
+    "id": 5,
+    "question": "What is the primary difference between a `while` loop and a `do-while` loop?",
+    "options": [
+      "A while loop can run indefinitely, but a do-while loop has a strict limit.",
+      "A while loop evaluates its condition before execution, whereas a do-while loop executes its block at least once before evaluating the condition.",
+      "A do-while loop cannot use the break keyword.",
+      "A while loop is for iterating over arrays, while a do-while loop is for reading files."
+    ],
+    "correctIndex": 1,
+    "explanation": "A do-while loop is an exit-controlled loop. The block of code executes first, and then the condition is checked. This guarantees the loop body will run at least one time.",
+    "difficulty": "easy",
+    "topic": "Control Structures",
+    "category": "Programming"
+  },
+  {
+    "id": 6,
+    "question": "You are writing a program to read a massive log file consisting of millions of lines to find a specific error code. If you want to stop scanning immediately once the error is found to save CPU cycles, which control flow statement should you use inside the loop?",
+    "options": [
+      "continue",
+      "break",
+      "return null",
+      "goto"
+    ],
+    "correctIndex": 1,
+    "explanation": "The 'break' statement immediately terminates the loop it is enclosed in. 'continue' would just skip to the next iteration, wasting CPU cycles reading the rest of the file.",
+    "difficulty": "easy",
+    "topic": "Control Structures",
+    "category": "Programming"
+  },
+  {
+    "id": 7,
+    "question": "Consider the following Python recursion snippet:\n```python\ndef compute(n):\n    if n <= 1:\n        return 1\n    return n * compute(n - 1)\n```\nWhat mathematical function does this represent, and what is `compute(4)`?",
+    "options": [
+      "Fibonacci sequence; 8",
+      "Factorial; 24",
+      "Exponential growth; 16",
+      "Summation; 10"
+    ],
+    "correctIndex": 1,
+    "explanation": "This is the classic recursive implementation of a factorial function (n!). For n=4, it calculates 4 * 3 * 2 * 1 = 24. The base case is when n is 1 or less.",
+    "difficulty": "medium",
+    "topic": "Functions",
+    "category": "Programming"
+  },
+  {
+    "id": 8,
+    "question": "Which of the following scenarios is a primary cause of a 'Stack Overflow' error during the execution of a program?",
+    "options": [
+      "Allocating too many large objects on the heap.",
+      "An array index going out of its defined bounds.",
+      "A recursive function failing to hit its base case.",
+      "Opening too many database connections simultaneously."
+    ],
+    "correctIndex": 2,
+    "explanation": "A stack overflow occurs when the call stack pointer exceeds the stack bound. This most commonly occurs when a recursive function enters an infinite loop because it lacks a valid base case, adding a new frame to the stack infinitely.",
+    "difficulty": "medium",
+    "topic": "Memory",
+    "category": "Programming"
+  },
+  {
+    "id": 9,
+    "question": "In Java or C#, Strings are 'immutable'. What does this imply when you regularly concatenate strings inside a large loop, e.g., `text += \"new_data\";`?",
+    "options": [
+      "The program will refuse to compile.",
+      "The string is extended in place efficiently.",
+      "A new string object is created in memory on every iteration, which is highly inefficient and causes memory bloat.",
+      "The string length is capped at a strict sequence limit."
+    ],
+    "correctIndex": 2,
+    "explanation": "Immutability means a string's value cannot be changed after creation. Concatenating with '+=' in a loop forces the runtime to create a brand new string object on every pass. To avoid this, a StringBuilder or StringBuffer should be used.",
+    "difficulty": "medium",
+    "topic": "Strings",
+    "category": "Programming"
+  },
+  {
+    "id": 10,
+    "question": "You need a data structure to store unique user IDs connecting to your live gaming server. Order does not matter, but fast lookups to check if an ID exists are critical. Which collection is most appropriate?",
+    "options": [
+      "ArrayList (or List)",
+      "LinkedList",
+      "HashSet (or Set)",
+      "Stack"
+    ],
+    "correctIndex": 2,
+    "explanation": "A HashSet uses a hash table internally, offering O(1) constant time complexity for lookups (checking if an ID exists) and inherently prevents duplicate entries.",
+    "difficulty": "medium",
+    "topic": "Collections",
+    "category": "Programming"
+  },
+  {
+    "id": 11,
+    "question": "What is the primary purpose of 'Garbage Collection' in modern programming languages like Java, C#, and Python?",
+    "options": [
+      "To delete source code files that are no longer used.",
+      "To automatically detect and reclaim heap memory occupied by objects that are no longer accessible or referenced by the program.",
+      "To clear the cache of the CPU.",
+      "To reset variable values to zero at the end of a method."
+    ],
+    "correctIndex": 1,
+    "explanation": "Garbage Collection relieves the developer from manual memory management (like malloc/free in C) by identifying objects that have no active references pointing to them and freeing that memory.",
+    "difficulty": "easy",
+    "topic": "Memory",
+    "category": "Programming"
+  },
+  {
+    "id": 12,
+    "question": "Analyze the pseudo-code for fetching a user profile over a network:\n```text\ntry {\n   connection = openNetwork();\n   profile = fetch(connection);\n} catch (NetworkException e) {\n   log(e);\n} finally {\n   connection.close();\n}\n```\nWhy is the `connection.close()` placed inside the `finally` block?",
+    "options": [
+      "Because the compiler requires all try-catch blocks to end with a finally block.",
+      "Because network connections can only be closed if an exception was thrown.",
+      "To ensure that the connection is always safely closed and resources are released, regardless of whether a NetworkException occurred or the fetch succeeded.",
+      "To restart the process if it fails."
+    ],
+    "correctIndex": 2,
+    "explanation": "The 'finally' block ensures that crucial cleanup code executes in all scenarios—whether the 'try' block completed successfully or failed and threw an exception. This prevents resource leaks.",
+    "difficulty": "medium",
+    "topic": "Exception",
+    "category": "Programming"
+  },
+  {
+    "id": 13,
+    "question": "Imagine two threads accessing a shared bank account variable balance. Thread A wants to add $50 and Thread B wants to deduct $30. If both threads read the balance simultaneously before modifying it, the final balance might be incorrect. What synchronization concept prevents this 'Race Condition'?",
+    "options": [
+      "Garbage Collection",
+      "Polymorphism",
+      "Creating independent copies of the variable",
+      "Mutual Exclusion (e.g., using Lock or Mutex)"
+    ],
+    "correctIndex": 3,
+    "explanation": "Mutual Exclusion (Mutex) or Locks ensure that only one thread can execute a critical section of code (reading and updating the balance) at a time, preventing race conditions.",
+    "difficulty": "hard",
+    "topic": "Concurrency",
+    "category": "Programming"
+  },
+  {
+    "id": 14,
+    "question": "A junior developer uses a `==` operator to compare two strings in Java: `if (str1 == str2)`. During a code review, you point out a bug. What is the fundamental issue here?",
+    "options": [
+      "The `==` operator does not exist in Java.",
+      "The `==` operator compares memory references (checking if they point to the exact same object), not the actual textual content of the strings.",
+      "Strings can only be compared using `<` or `>`.",
+      "String lengths must be checked before using `==`."
+    ],
+    "correctIndex": 1,
+    "explanation": "In Java, `==` compares object references. Two distinct String objects containing the exact same text will evaluate to false with `==`. The `.equals()` method must be used to compare the semantic content.",
+    "difficulty": "medium",
+    "topic": "Strings",
+    "category": "Programming"
+  },
+  {
+    "id": 15,
+    "question": "A developer writes an application in C that consistently consumes more and more RAM over several hours of running, eventually causing the OS to crash the process. The code heavily uses `malloc()` but rarely uses `free()`. What is this phenomenon called?",
+    "options": [
+      "Deadlock",
+      "Stack Overflow",
+      "Memory Leak",
+      "Buffer Overrun"
+    ],
+    "correctIndex": 2,
+    "explanation": "A memory leak occurs when a program allocates heap memory but fails to release it back to the operating system when it is no longer needed, causing continuous memory consumption over time.",
+    "difficulty": "medium",
+    "topic": "Memory",
+    "category": "Programming"
+  },
+  {
+    "id": 16,
+    "question": "When building an e-commerce catalog, you have a `Product` base interface. You create `ElectronicProduct` and `ClothingProduct` which both implement the `Product` interface. What key software engineering benefit does using this Interface provide?",
+    "options": [
+      "It makes the program execute 10x faster.",
+      "It allows the catalog list to store a collection of completely different product types under a single unified `Product` type, enforcing a contract of methods they all must have.",
+      "It prevents hackers from reading the database.",
+      "It automatically converts standard classes into Singleton patterns."
+    ],
+    "correctIndex": 1,
+    "explanation": "Interfaces provide Abstraction. They allow you to define a contract (e.g., getsPrice()) that all specific product types must follow, enabling you to process all implementations uniformly without knowing their specific concrete classes.",
+    "difficulty": "medium",
+    "topic": "OOP",
+    "category": "Programming"
+  },
+  {
+    "id": 17,
+    "question": "What is 'Deadlock' in multi-threaded programming?",
+    "options": [
+      "When a thread crashes completely and must be restarted.",
+      "When two or more threads are permanently blocked, each waiting for a lock or resource held by the other.",
+      "When the CPU cache runs out of memory.",
+      "When an infinite loop is accidentally triggered."
+    ],
+    "correctIndex": 1,
+    "explanation": "Deadlock is an architectural flaw where Thread 1 holds Resource A and waits for Resource B, while Thread 2 holds Resource B and waits for Resource A. Neither can proceed.",
+    "difficulty": "hard",
+    "topic": "Concurrency",
+    "category": "Programming"
+  },
+  {
+    "id": 18,
+    "question": "Which of these perfectly describes the difference between an Exception and a Syntax Error?",
+    "options": [
+      "Exceptions occur before running the program, Syntax Errors happen while it's running.",
+      "Syntax errors prevent the program from compiling or starting due to grammatical rule violations. Exceptions occur during execution (runtime) when anomalous conditions are met, like dividing by zero.",
+      "Both mean exactly the same thing.",
+      "Exceptions are meant to be ignored, Syntax errors must be caught."
+    ],
+    "correctIndex": 1,
+    "explanation": "Syntax errors (missing semicolons, mismatched brackets) are caught by the compiler/interpreter before execution. Exceptions (NullReference, DivideByZero) occur natively during runtime when evaluating logic.",
+    "difficulty": "easy",
+    "topic": "Errors",
+    "category": "Programming"
+  },
+  {
+    "id": 19,
+    "question": "To convert the string \"123\" into integer 123 in a statically typed language, which operation is generally used?",
+    "options": [
+      "Casting, like (int)\"123\"",
+      "Concatenation",
+      "Parsing, like Integer.parseInt(\"123\")",
+      "Bitwise shifting"
+    ],
+    "correctIndex": 2,
+    "explanation": "Casting is usually for converting primitive types (like float to int) where the binary representation is somewhat compatible. Parsing is required to actively read characters of a string and calculate the numerical value it represents.",
+    "difficulty": "medium",
+    "topic": "Data Types",
+    "category": "Programming"
+  },
+  {
+    "id": 20,
+    "question": "A developer needs a data structure that implements 'First-In, First-Out' (FIFO) behavior to manage tasks arriving to a background worker in the order they were submitted. Which structure is ideal?",
+    "options": [
+      "Stack",
+      "Queue",
+      "Binary Tree",
+      "HashMap"
+    ],
+    "correctIndex": 1,
+    "explanation": "A Queue operates on a FIFO basis, much like a physical line of people waiting. The first item added to the queue is the first item to be removed.",
+    "difficulty": "easy",
+    "topic": "Collections",
+    "category": "Programming"
+  },
+  {
+    "id": 21,
+    "question": "You define a variable inside an 'if' statement block. Later in the outer function, you try to `print` that variable, but the compiler states the variable does not exist. What concept does this highlight?",
+    "options": [
+      "Memory Leak",
+      "Block Scope",
+      "Global Variables",
+      "Garbage Collection"
+    ],
+    "correctIndex": 1,
+    "explanation": "Variables defined within a specific block (like inside an if-statement or a loop) typically have Block Scope. They are created when the block is entered and destroyed when the block is exited, making them invisible to the outer scope.",
+    "difficulty": "easy",
+    "topic": "Variables",
+    "category": "Programming"
+  },
+  {
+    "id": 22,
+    "question": "In Object-Oriented Programming, what is a 'Constructor'?",
+    "options": [
+      "A tool used to compile the source code.",
+      "A special method called automatically when an object is instantiated, used to initialize the object's initial state and fields.",
+      "A function that strictly destroys an object when it's no longer needed.",
+      "A library used to build graphical user interfaces."
+    ],
+    "correctIndex": 1,
+    "explanation": "Constructors share the same name as the class and are invoked using the 'new' keyword. Their sole purpose is to set up the newly created object with default or provided values before it is used.",
+    "difficulty": "easy",
+    "topic": "OOP",
+    "category": "Programming"
+  },
+  {
+    "id": 23,
+    "question": "In the following boolean expression: `if (user != null && user.isActive())`. The language evaluates the first condition `user != null`. If it is false, it completely ignores the second condition and skips the block. What is this optimization called?",
+    "options": [
+      "Dynamic Typing",
+      "Short-Circuit Evaluation",
+      "Ternary Operator",
+      "Recursion"
+    ],
+    "correctIndex": 1,
+    "explanation": "Short-circuiting occurs with logical AND (&&) and OR (||). If the left side of an AND is false, the entire expression must be false, so the right side is never evaluated, which safely prevents NullPointerExceptions in this specific example.",
+    "difficulty": "medium",
+    "topic": "Operators",
+    "category": "Programming"
+  },
+  {
+    "id": 24,
+    "question": "What is the key difference between an Array and a standard ArrayList / List?",
+    "options": [
+      "Arrays can store multiple values, Lists can only store one.",
+      "Arrays are fixed in size once instantiated, whereas ArrayLists can dynamically grow or shrink as elements are added or removed.",
+      "Arrays are only for strings, Lists are for integers.",
+      "There is absolutely no difference; they are just synonyms."
+    ],
+    "correctIndex": 1,
+    "explanation": "A traditional Array requires its exact size at creation and cannot be expanded. An ArrayList is a dynamic data structure backed by an array that handles resizing arrays under the hood automatically.",
+    "difficulty": "medium",
+    "topic": "Arrays",
+    "category": "Programming"
+  },
+  {
+    "id": 25,
+    "question": "Which programming paradigm heavily emphasizes pure mathematical functions, avoids mutating shared state, and avoids side effects?",
+    "options": [
+      "Object-Oriented Programming (OOP)",
+      "Procedural Programming",
+      "Functional Programming",
+      "Assembly Level Programming"
+    ],
+    "correctIndex": 2,
+    "explanation": "Functional Programming treats computation as the evaluation of mathematical functions, heavily relying on immutability and first-class functions (e.g., Haskell, Clojure).",
+    "difficulty": "hard",
+    "topic": "Basics",
+    "category": "Programming"
+  },
+  {
+    "id": 26,
+    "question": "You map a 'User ID' string to an entire 'User Object'. Later, you want to retrieve the 'User Object' by passing the 'User ID' as a key. Which specific collection data structure is optimally designed for this key-value pairing?",
+    "options": [
+      "LinkedList",
+      "Dictionary / Map / HashMap",
+      "TreeSet",
+      "Multi-dimensional Array"
+    ],
+    "correctIndex": 1,
+    "explanation": "Maps, Dictionaries, or HashMaps store data as Key-Value pairs, allowing highly efficient retrieval of a value (User Object) using a unique identifier key (User ID).",
+    "difficulty": "easy",
+    "topic": "Collections",
+    "category": "Programming"
+  },
+  {
+    "id": 27,
+    "question": "Consider you have a method `void process(int n)`. You then create another method `void process(String text)`. You have two methods with the exact same name but different parameter types in the same class. This is an example of:",
+    "options": [
+      "Method Overriding",
+      "Method Overloading",
+      "Abstract Routing",
+      "Data Hiding"
+    ],
+    "correctIndex": 1,
+    "explanation": "Method Overloading allows multiple methods in the same class to share the same name as long as their parameter signatures are distinct (different types or number of parameters). It is compile-time polymorphism.",
+    "difficulty": "medium",
+    "topic": "OOP",
+    "category": "Programming"
+  },
+  {
+    "id": 28,
+    "question": "A developer writes code that inadvertently attempts to divide an integer by zero (`x = 10 / 0;`). What generally happens when the program hits this line at runtime?",
+    "options": [
+      "The variable x is assigned the value 0.",
+      "The program raises an Exception (such as ArithmeticException or DivideByZeroException).",
+      "The program generates the value 'Infinity'.",
+      "The compiler auto-corrects it to divide by 1."
+    ],
+    "correctIndex": 1,
+    "explanation": "In most languages, integer division by zero is mathematically undefined and results in an active runtime exception that will crash the program if unhandled by a try-catch block.",
+    "difficulty": "easy",
+    "topic": "Errors",
+    "category": "Programming"
+  },
+  {
+    "id": 29,
+    "question": "In a web application architecture, which scenario represents a 'Synchronous' blocking execution?",
+    "options": [
+      "The mobile app requests data from the server and instantly shows a loading spinner while the user continues to scroll.",
+      "The program stops executing entirely, waiting exactly 5 seconds for a database query to finish before drawing the next UI frame.",
+      "A background worker triggers a push notification.",
+      "Event listeners detecting mouse clicks."
+    ],
+    "correctIndex": 1,
+    "explanation": "Synchronous, blocking operations halt the thread's execution entirely until a task (like a slow network or DB call) completes. Asynchronous execution allows the program thread to continue working on other things while waiting.",
+    "difficulty": "medium",
+    "topic": "Concurrency",
+    "category": "Programming"
+  },
+  {
+    "id": 30,
+    "question": "When debugging, you execute a 'Step Over' command. What exactly does this do?",
+    "options": [
+      "It completely skips the current function and immediately returns to the caller.",
+      "It executes the currently highlighted line of code entirely, including executing any functions on that line, and pauses at the very next line in the current scope.",
+      "It steps deeply inside the function that is highlighted so you can see its inner workings.",
+      "It stops the debugging session."
+    ],
+    "correctIndex": 1,
+    "explanation": "'Step Over' executes a line of code as a single block transaction, useful when you know a function works and do not want to 'Step Into' its internal detailed implementation.",
+    "difficulty": "medium",
+    "topic": "Debugging",
+    "category": "Programming"
+  }
+]

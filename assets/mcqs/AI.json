@@ -1,0 +1,452 @@
+[
+  {
+    "id": 1,
+    "question": "A data scientist is modeling house prices based on features like square footage, number of bedrooms, and neighborhood. The output variable (price) is a continuous numerical value. Which category of machine learning algorithm is most appropriate for this specific problem?",
+    "options": [
+      "Clustering",
+      "Classification",
+      "Regression",
+      "Dimensionality Reduction"
+    ],
+    "correctIndex": 2,
+    "explanation": "Regression algorithms are explicitly designed for predicting continuous numerical outputs (like price or temperature). Classification is for categorical labels, and Clustering is for grouping unlabeled data.",
+    "difficulty": "easy",
+    "topic": "Supervised Learning",
+    "category": "AI & Data Analytics"
+  },
+  {
+    "id": 2,
+    "question": "You deployed an ML model to production that classifies fraudulent transactions. Initially, the model performed with 98% accuracy. After six months, accuracy dropped to 75% without any code or data pipeline changes. What is the most likely cause?",
+    "options": [
+      "Overfitting during the original model training phase.",
+      "Hardware degradation on the inference server.",
+      "Concept drift (or Data drift), where the underlying patterns or distribution of real-world fraudulent behaviors have evolved over time.",
+      "The activation function mathematically decayed."
+    ],
+    "correctIndex": 2,
+    "explanation": "Concept/Data drift occurs when statistical properties of the target or input data change over time. Fraudsters constantly change tactics, rendering historical models obsolete without retraining.",
+    "difficulty": "medium",
+    "topic": "MLOps",
+    "category": "AI & Data Analytics"
+  },
+  {
+    "id": 3,
+    "question": "A hospital uses a neural network to detect a rare disease from X-rays. Out of 10,000 patients, only 10 actually have the disease. A poorly designed model simply predicts 'No Disease' for everyone, achieving 99.9% overall accuracy. Which evaluation metric would best expose the model's utter failure to detect actual sick patients?",
+    "options": [
+      "Root Mean Square Error (RMSE)",
+      "Recall (Sensitivity) of the positive class",
+      "Overall Accuracy",
+      "Mean Absolute Error (MAE)"
+    ],
+    "correctIndex": 1,
+    "explanation": "Recall measures the proportion of actual positives (sick patients) that were correctly identified. In this case, the model identified 0 out of 10, so its Recall is 0%, exposing how terrible it is despite 99.9% accuracy.",
+    "difficulty": "hard",
+    "topic": "Model Evaluation",
+    "category": "AI & Data Analytics"
+  },
+  {
+    "id": 4,
+    "question": "When training a Deep Neural Network, which algorithm specifically calculates the gradients of the loss function with respect to the weights by applying the calculus chain rule backwards from the output layer to the input layer?",
+    "options": [
+      "Forward Propagation",
+      "K-Means Clustering",
+      "Backpropagation",
+      "Principal Component Analysis"
+    ],
+    "correctIndex": 2,
+    "explanation": "Backpropagation calculates exactly how much each weight contributed to the final error, allowing the optimization algorithm (like Gradient Descent) to update the weights in the correct direction to minimize loss.",
+    "difficulty": "medium",
+    "topic": "Deep Learning Fundamentals",
+    "category": "AI & Data Analytics"
+  },
+  {
+    "id": 5,
+    "question": "A dataset contains an 'Age' column ranging from 18 to 90, and an 'Income' column ranging from $20,000 to $500,000. Before feeding this into a distance-based algorithm like K-Nearest Neighbors (KNN), what critical pre-processing step must be taken?",
+    "options": [
+      "One-Hot Encoding",
+      "Feature Scaling (Normalization or Standardization)",
+      "Label Encoding",
+      "Removing all data points above age 65"
+    ],
+    "correctIndex": 1,
+    "explanation": "Distance-based algorithms calculate Euclidean distance. If not scaled, the massive 'Income' variance will completely mathematically overpower the 'Age' differences, making the model practically ignore age. Scaling puts them on equal footing.",
+    "difficulty": "medium",
+    "topic": "Data Pre-processing",
+    "category": "AI & Data Analytics"
+  },
+  {
+    "id": 6,
+    "question": "Which specific technique involves artificially expanding the size of an image training dataset by randomly applying transformations such as rotation, flipping, zooming, or translating to the existing images?",
+    "options": [
+      "Data Imputation",
+      "Feature Extraction",
+      "Data Augmentation",
+      "Dimensionality Reduction"
+    ],
+    "correctIndex": 2,
+    "explanation": "Data Augmentation exposes the neural network to a wider variety of scenarios without collecting new raw data, making the model more robust to physical variations and highly resistant to overfitting.",
+    "difficulty": "easy",
+    "topic": "Computer Vision",
+    "category": "AI & Data Analytics"
+  },
+  {
+    "id": 7,
+    "question": "You are building a Natural Language Processing system to analyze customer reviews. You need to convert words into dense numerical vectors where words with similar semantic meanings (like 'happy' and 'joyful') are placed close together mathematically. What technology achieves this?",
+    "options": [
+      "TF-IDF Vectorization",
+      "Word Embeddings (e.g., Word2Vec, GloVe)",
+      "Bag-of-Words (BoW)",
+      "One-Hot Encoding"
+    ],
+    "correctIndex": 1,
+    "explanation": "Word embeddings map words to a multi-dimensional space based on their context within large text corpora, capturing profound semantic relationships. TF-IDF and BoW are sparse and don't natively encode deeper meaning.",
+    "difficulty": "medium",
+    "topic": "NLP",
+    "category": "AI & Data Analytics"
+  },
+  {
+    "id": 8,
+    "question": "In a Convolutional Neural Network (CNN) architecture designed for image classification, what is the fundamental purpose of the 'Max Pooling' layer usually placed directly after a convolutional block?",
+    "options": [
+      "To artificially increase the resolution of the image by extrapolating missing pixels.",
+      "To drastically reduce the spatial dimensions (width and height) of the feature maps, reducing computational load and providing translational invariance.",
+      "To convert the RGB image explicitly into greyscale.",
+      "To increase the number of filters applied to the image."
+    ],
+    "correctIndex": 1,
+    "explanation": "Max Pooling down-samples the image representation, summarizing features. If a model detects a 'cat ear' in the top-left, max pooling ensures it still registers broadly near the top-left, even if shifted slightly by pixels.",
+    "difficulty": "medium",
+    "topic": "Computer Vision",
+    "category": "AI & Data Analytics"
+  },
+  {
+    "id": 9,
+    "question": "A retail company wants to segment its customer base of 10 million users into 5 distinct groups based completely on un-labeled purchasing behaviors to target marketing campaigns. Which algorithm cluster is appropriate?",
+    "options": [
+      "Decision Trees (Classification)",
+      "Logistic Regression",
+      "K-Means (Unsupervised Clustering)",
+      "Linear Regression"
+    ],
+    "correctIndex": 2,
+    "explanation": "K-Means is an unsupervised clustering algorithm explicitly designed to partition unlabeled data into K distinct clusters (in this case, 5) based on feature similarity without requiring explicit target variables.",
+    "difficulty": "easy",
+    "topic": "Unsupervised Learning",
+    "category": "AI & Data Analytics"
+  },
+  {
+    "id": 10,
+    "question": "What breakthrough architectural mechanism allowed models like BERT and GPT-4 to largely disregard sequential processing limitations of LSTMs/RNNs, processing entire sentences simultaneously while dynamically weighing the relevance of different words?",
+    "options": [
+      "The Central Limit Theorem",
+      "Self-Attention Mechanism (The Transformer architecture)",
+      "Gradient Boosting",
+      "Markov Chains"
+    ],
+    "correctIndex": 1,
+    "explanation": "The Transformer architecture relies entirely on 'Attention' to process context in parallel, connecting any given word to every other word in a sentence instantly to understand nuances and contexts without sequential bottlenecks.",
+    "difficulty": "hard",
+    "topic": "NLP / Deep Learning",
+    "category": "AI & Data Analytics"
+  },
+  {
+    "id": 11,
+    "question": "In the context of ensemble learning, what is the primary technical difference between 'Bagging' (e.g., Random Forest) and 'Boosting' (e.g., XGBoost)?",
+    "options": [
+      "Bagging trains models instantly in parallel independently; Boosting trains models sequentially, where each new model is deliberately constructed to correct the errors made by previously trained models.",
+      "Bagging is used strictly for classification, whereas Boosting is exclusively for regression.",
+      "Bagging reduces bias mathematically, while Boosting primarily reduces structural variance.",
+      "They are identical mathematical processes with different commercial marketing names."
+    ],
+    "correctIndex": 0,
+    "explanation": "Bagging builds independent models simultaneously on random subsets of data (lowering variance). Boosting builds models in a chain, where Model #2 focuses heavily on the instances Model #1 incorrectly predicted.",
+    "difficulty": "hard",
+    "topic": "Ensemble Learning",
+    "category": "AI & Data Analytics"
+  },
+  {
+    "id": 12,
+    "question": "An AI model predicts whether a borrower will default on a loan. A 'False Positive' in this scenario means?",
+    "options": [
+      "The model predicted they would not default, and they did default.",
+      "The model predicted they would default, and they did default.",
+      "The model predicted they would default, but they actually paid back the loan successfully.",
+      "The model predicted they would not default, and they successfully paid back the loan."
+    ],
+    "correctIndex": 2,
+    "explanation": "A False Positive (Type I error) occurs when the model falsely categorizes a negative case as positive. Here, it incorrectly labels a good customer as a bad 'defaulter', potentially causing the bank to lose a perfectly safe financial deal.",
+    "difficulty": "medium",
+    "topic": "Model Evaluation",
+    "category": "AI & Data Analytics"
+  },
+  {
+    "id": 13,
+    "question": "To prevent overfitting during neural network training, a developer implements 'Dropout'. How exactly does Dropout function during the training phase?",
+    "options": [
+      "It completely deletes 20% of the training dataset rows prior to the first epoch.",
+      "It randomly deactivates (zeroes out) a specific percentage of neurons in a layer individually during each forward/backward pass, forcing the network to structurally spread out learned dependencies.",
+      "It forces the system to drop the learning rate aggressively if the loss stops decreasing.",
+      "It terminates the execution iteration immediately if the hardware GPU overheats."
+    ],
+    "correctIndex": 1,
+    "explanation": "Dropout prevents units from co-adapting too heavily on specific features. By randomly turning nodes off, the network must learn robust, redundant pathways to arrive at correct answers, vastly improving generalization capability.",
+    "difficulty": "medium",
+    "topic": "Deep Learning Optimization",
+    "category": "AI & Data Analytics"
+  },
+  {
+    "id": 14,
+    "question": "In Pandas (Python), you have deeply merged two massive DataFrames, resulting in significant 'NaN' (Not a Number/Missing) values. Discarding the rows completely ruins your dataset volume. What is the process of filling these algorithmic gaps systematically?",
+    "options": [
+      "Standardization",
+      "Data Imputation",
+      "Data Leaking",
+      "One-Hot Masking"
+    ],
+    "correctIndex": 1,
+    "explanation": "Imputation is the statistical practice of substituting missing data with an estimated substitution (like replacing NaNs with the mean column value, median, or using a predictive ML model) to retain dataset integrity.",
+    "difficulty": "easy",
+    "topic": "Data Pre-processing",
+    "category": "AI & Data Analytics"
+  },
+  {
+    "id": 15,
+    "question": "Which of the following scenarios describes 'Data Leakage' in machine learning, which frequently causes models to look incredible during testing but fail miserably in production?",
+    "options": [
+      "A database administrator accidentally uploading public datasets securely.",
+      "Using future information or target variables that legitimately will not be fundamentally available at inference time to somehow engineer predictive features during the model's localized training.",
+      "When a neural network model saves architecture weights locally rather than caching directly to AWS.",
+      "Randomly oversampling minority clusters algorithmically via SMOTE functionality."
+    ],
+    "correctIndex": 1,
+    "explanation": "Data leakage provides the model with illegitimate 'hints' about the future. E.g., predicting 'if surgery is needed' by using a feature 'patient successfully recovered in hospital room'. In reality, when deciding on surgery, recovery hasn't happened yet.",
+    "difficulty": "hard",
+    "topic": "Model Training Protocols",
+    "category": "AI & Data Analytics"
+  },
+  {
+    "id": 16,
+    "question": "A dataset describes car models with a 'Color' column containing strings: 'Red', 'Blue', and 'Green'. Machine learning models fundamentally require numerical inputs mathematically. Which categorical encoding technique converts 'Red', 'Blue', 'Green' horizontally into three distinct binary (0 or 1) columns?",
+    "options": [
+      "Min-Max Normalization Scaling",
+      "Label Encoding (0, 1, 2)",
+      "Target Mean Encoding",
+      "One-Hot Encoding"
+    ],
+    "correctIndex": 3,
+    "explanation": "One-Hot Encoding treats categories neutrally, allocating binary columns without establishing subjective linear hierarchies. Using sequential Label Encoding (Red=0, Blue=1, Green=2) inadvertently signals mathematical ranks mathematically (2 is twice as big as 1).",
+    "difficulty": "medium",
+    "topic": "Feature Engineering",
+    "category": "AI & Data Analytics"
+  },
+  {
+    "id": 17,
+    "question": "You graph two variables on a scatterplot: 'Ice Cream Sales' vs 'Drowning Incidents' globally across seasons, demonstrating a strong mathematically positive correlation coefficient (Pearson r = +0.85). What logical conclusion can be established structurally?",
+    "options": [
+      "Buying more ice cream directly inherently causes drowning incidents globally.",
+      "Prohibiting ice cream directly mathematically prevents drowning statistics.",
+      "Correlation categorically implies causation; ice cream contains lethal densities.",
+      "Correlation explicitly does not imply causation; a hidden third lurking variable (like hotter summer temperatures globally) likely simultaneously drives both factors dynamically."
+    ],
+    "correctIndex": 3,
+    "explanation": "This is the classic textbook example of why statistical correlation alone fails to prove inherent causation. Confounding hidden factors frequently orchestrate synchronized structural movements.",
+    "difficulty": "easy",
+    "topic": "Statistics & EDA",
+    "category": "AI & Data Analytics"
+  },
+  {
+    "id": 18,
+    "question": "Which fundamental Machine Learning concept involves drastically heavily penalizing extremely massive feature weights mathematically to specifically prevent structural model overfitting?",
+    "options": [
+      "Regularization (L1 Lasso or L2 Ridge)",
+      "Data Augmentation synthesis",
+      "Principal Component Analysis abstraction",
+      "Stochastic localized gradient descent optimizations"
+    ],
+    "correctIndex": 0,
+    "explanation": "Regularization fundamentally modifies loss optimization equations directly structurally appending penalty equations tied explicitly to absolute magnitude coefficient depths enforcing simpler, more robust scalable models.",
+    "difficulty": "medium",
+    "topic": "Supervised Learning",
+    "category": "AI & Data Analytics"
+  },
+  {
+    "id": 19,
+    "question": "A team trains an NLP sentiment analysis AI structurally outputting numerical probability values utilizing a classic sigmoid classification layer (Values 0.0 to 1.0). What threshold optimization strategy accurately represents ROC-AUC metric calculations conceptually?",
+    "options": [
+      "Calculating precisely physical milliseconds structurally classifying documents simultaneously.",
+      "Systematically evaluating true positive vs false positive sensitivity balances mathematically altering decision-making statistical thresholds from 0 through 1 continuously.",
+      "Analyzing string combinations counting vocabulary syntax limits objectively.",
+      "Tracking graphical processing unit overheating structural patterns dynamically."
+    ],
+    "correctIndex": 1,
+    "explanation": "The Area Under Receiver Operating Characteristic (ROC-AUC) dynamically integrates sensitivity curves mapping True Positive Rate combinations continuously across all conceivable probability thresholds (not just the static 0.5 default) objectively evaluating fundamental separability.",
+    "difficulty": "hard",
+    "topic": "Model Evaluation",
+    "category": "AI & Data Analytics"
+  },
+  {
+    "id": 20,
+    "question": "Which specialized AI application extensively trains sophisticated mathematical discriminator networks aggressively identifying localized generative network fakes dynamically creating realistic synthetic artifacts structurally (Images/Audio/Deepfakes)?",
+    "options": [
+      "DBSCAN Isolation Algorithms",
+      "K-Nearest Spatial Neighbors",
+      "Generative Adversarial Networks (GANs)",
+      "ARIMA Structural Forecasters"
+    ],
+    "correctIndex": 2,
+    "explanation": "GAN architecture forces dynamically dueling localized networks structurally: a Generator constructs fake artificial profiles continuously while a specialized Discriminator objectively classifies synthetic differences dynamically pushing limits achieving hyper-realistic results structurally.",
+    "difficulty": "medium",
+    "topic": "Advanced Deep Learning",
+    "category": "AI & Data Analytics"
+  },
+  {
+    "id": 21,
+    "question": "When deploying an LLM (Large Language Model) application referencing proprietary company documents strictly structurally, which modern AI methodology avoids massive expensive retraining loops inherently incorporating company manuals directly injecting structured prompt contexts dynamically?",
+    "options": [
+      "Zero-Shot Direct Translation Learning",
+      "Retrieval-Augmented Generation (RAG)",
+      "Dynamic Localized Quantization Processing",
+      "Unsupervised Topological Mapping Analysis"
+    ],
+    "correctIndex": 1,
+    "explanation": "RAG architecture mathematically vectorizes document knowledgebases dynamically identifying contextual string excerpts accurately actively pushing precise passages instantly to generalized generative models avoiding structural hallucinations intrinsically.",
+    "difficulty": "medium",
+    "topic": "NLP / Modern Architectures",
+    "category": "AI & Data Analytics"
+  },
+  {
+    "id": 22,
+    "question": "What algorithmic dimension reduction technique fundamentally compresses 1,000 continuous variables dynamically establishing mathematically localized orthogonal components intentionally capturing maximizing structural statistical variance dynamically eliminating correlated noisy datasets?",
+    "options": [
+      "Linear Regression Forecasting methodologies",
+      "Principal Component Analysis (PCA)",
+      "Recurrent Neural Network sequences",
+      "Generative adversarial networks"
+    ],
+    "correctIndex": 1,
+    "explanation": "PCA establishes highly specialized algorithmic eigen-vectors combining multi-layered matrices strategically calculating optimal projection axes structurally mapping maximizing distribution densities dynamically simplifying extreme visual dimensions inherently.",
+    "difficulty": "hard",
+    "topic": "Unsupervised Learning",
+    "category": "AI & Data Analytics"
+  },
+  {
+    "id": 23,
+    "question": "A reinforcement learning agent trains successfully mastering virtual chess games dynamically but completely dramatically fails attempting minimal physical board movements physically. What specific concept describes attempting implementing virtual dynamic simulations into physical reality effectively?",
+    "options": [
+      "Synthetic Artificial Algorithmic Scaling",
+      "Sim-to-Real Domain Transfer methodologies",
+      "Markov Decision Probability Transitions",
+      "Hyper-parameter localized tuning optimization"
+    ],
+    "correctIndex": 1,
+    "explanation": "Sim-to-Real structural methodologies address dynamic unpredictable physical variances intentionally building highly tolerant localized algorithms effectively closing severe representation differences natively separating perfect logic simulators from messy physical reality sensors fundamentally.",
+    "difficulty": "hard",
+    "topic": "Reinforcement Learning",
+    "category": "AI & Data Analytics"
+  },
+  {
+    "id": 24,
+    "question": "What fundamental data structural bias describes specifically AI image classifiers unintentionally explicitly categorizing all structurally distinct white fuzzy visual artifacts exclusively logically as valid 'Winter Snow' inherently ignoring actual categorical distinctions?",
+    "options": [
+      "Spurious Algorithmic Correlations",
+      "Bayesian Subjective Processing Analysis",
+      "Gradient Descent localized freezing",
+      "Dynamic Recruital Processing"
+    ],
+    "correctIndex": 0,
+    "explanation": "Spurious dependencies explicitly construct logical but entirely objectively incorrect dependencies fundamentally relying on accidental localized background artifacts (e.g. consistently photographing distinct Husky dogs structurally sitting dynamically exclusively across white snowy backgrounds unconditionally).",
+    "difficulty": "medium",
+    "topic": "AI Ethics & Interpretability",
+    "category": "AI & Data Analytics"
+  },
+  {
+    "id": 25,
+    "question": "You logically organize continuously recorded live dynamic stock market trading statistics exclusively structurally dependent primarily upon consecutive localized date timestamp sequences. What extremely specific analytical task mathematically models predicting incoming market variations algorithmically?",
+    "options": [
+      "Categorical Subjective Decision Trees",
+      "Time-Series Forecasting structural methodologies",
+      "Unsupervised Localized Spatial Profiling",
+      "Markov Logic Spatial Networks"
+    ],
+    "correctIndex": 1,
+    "explanation": "Time-Series sequential models aggressively capture fundamental cyclic mathematical trending relationships relying dynamically exclusively extensively explicitly evaluating temporal chronologies processing distinct autoregressive dependencies structurally analyzing lags mathematically.",
+    "difficulty": "easy",
+    "topic": "Predictive Analytics",
+    "category": "AI & Data Analytics"
+  },
+  {
+    "id": 26,
+    "question": "Which structural algorithmic search explicitly evaluates text token distributions calculating precisely exactly how surprisingly unique objective phrase occurrences theoretically rank fundamentally identifying critical terminology dynamically across massive distinct localized documents?",
+    "options": [
+      "Bag of Unique Linguistic Words",
+      "Term Frequency-Inverse Document Frequency (TF-IDF)",
+      "Continuous Top-Level Categorical Models",
+      "Support Localized Vector Classifiers"
+    ],
+    "correctIndex": 1,
+    "explanation": "TF-IDF intrinsically heavily heavily rewards uniquely isolated terminology fundamentally penalizing inherently frequently distributed structural terminology (like 'the' or 'and') accurately quantifying objective document significance dynamically structurally processing natural language fundamentally.",
+    "difficulty": "medium",
+    "topic": "NLP",
+    "category": "AI & Data Analytics"
+  },
+  {
+    "id": 27,
+    "question": "Object detection architectures effectively outline dynamic bounding target boxes analyzing digital input images inherently defining intersection algorithms actively calculating bounding overlay areas successfully. What specific metric calculates mathematically predicting targeted bounds extensively exactly?",
+    "options": [
+      "DBSCAN Density Metrics",
+      "Standard Mean Deviance Analysis",
+      "Intersection over Union (IoU) mapping",
+      "Topological Node Accuracy analysis"
+    ],
+    "correctIndex": 2,
+    "explanation": "IoU defines exact fractional localization overlap structural relationships dividing accurately mapped intersection bounding areas distinctly structurally calculating dynamically predicting analytical Union parameters structurally measuring Computer Vision targeted precision completely.",
+    "difficulty": "medium",
+    "topic": "Computer Vision",
+    "category": "AI & Data Analytics"
+  },
+  {
+    "id": 28,
+    "question": "In the MLOps lifecycle, a sophisticated 'Shadow Deployment' inherently validates complex trained inference predictive architectures structurally explicitly doing what fundamentally?",
+    "options": [
+      "Encrypting completely logic databases intentionally hiding localized weights fundamentally.",
+      "Releasing fundamentally modified dynamic code explicitly terminating original primary routing infrastructures.",
+      "Duplicating live user query statistics simultaneously actively feeding historical production systems recording exact background predictions continuously objectively evaluating performance entirely avoiding customer disruptions dynamically.",
+      "Executing models extremely selectively operating exclusively during specifically scheduled evening intervals strictly controlling output costs entirely."
+    ],
+    "correctIndex": 2,
+    "explanation": "Shadow Deployments safely rigorously evaluate algorithmic mathematical logic concurrently executing live structural requests dynamically storing theoretical outputs deliberately without explicitly formally returning beta responses avoiding compromising commercial reliability practically.",
+    "difficulty": "hard",
+    "topic": "MLOps",
+    "category": "AI & Data Analytics"
+  },
+  {
+    "id": 29,
+    "question": "What algorithmic evaluation procedure rigorously completely separates distinct training statistical information partitioning distinctly structural databases aggressively executing iterative cyclic folds accurately analyzing average validation structural robustness dynamically?",
+    "options": [
+      "Synthetic Minority Mathematical Oversampling",
+      "Continuous Dynamic Dimensional Reduction",
+      "K-Fold Cross-Validation protocols",
+      "Topological Subjective Structural Abstraction"
+    ],
+    "correctIndex": 2,
+    "explanation": "Cross Validation dynamically cycles systematically objectively cycling through completely logically separated historical data 'k' iterative instances successfully heavily preventing statistical model overfitting inherently effectively balancing accurate evaluation mathematically.",
+    "difficulty": "easy",
+    "topic": "Model Evaluation",
+    "category": "AI & Data Analytics"
+  },
+  {
+    "id": 30,
+    "question": "A deep mathematical learning algorithm incorporates continuous sequential chronological processing layers analyzing distinct linguistic translation semantics directly actively incorporating hidden recurrent states entirely successfully mapping memory internally actively. What exact architecture defines historically evaluating memory sequences dynamically?",
+    "options": [
+      "Standard Multi-layer Perceptrons unconditionally",
+      "Convolutional Distinct Filtering Sequences",
+      "Recurrent Neural Networks (RNNs or LSTMs)",
+      "Decision Forest Structural Methods"
+    ],
+    "correctIndex": 2,
+    "explanation": "RNN networks natively process dynamically structurally evaluating hidden recurrent localized temporal chronological dependencies exclusively establishing highly intricate sequential algorithmic memories perfectly parsing temporal streams structurally predicting natural languages objectively.",
+    "difficulty": "easy",
+    "topic": "Deep Learning / Sequence Models",
+    "category": "AI & Data Analytics"
+  }
+]

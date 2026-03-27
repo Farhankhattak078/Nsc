@@ -1,0 +1,452 @@
+[
+  {
+    "id": 1,
+    "question": "You are building a navigation app that needs to find the shortest possible route between two cities on a map with varying terrain difficulties (edge weights). Which algorithm is optimal for finding the single-source shortest path if all terrain difficulties are positive?",
+    "options": [
+      "Depth-First Search (DFS)",
+      "Bellman-Ford Algorithm",
+      "Dijkstra's Algorithm",
+      "Floyd-Warshall Algorithm"
+    ],
+    "correctIndex": 2,
+    "explanation": "Dijkstra's Algorithm optimally finds the shortest path from a single source node to all other nodes in a graph with non-negative edge weights.",
+    "difficulty": "medium",
+    "topic": "Graph Algorithms",
+    "category": "DSA"
+  },
+  {
+    "id": 2,
+    "question": "Consider a hash table of size 10 using open addressing with linear probing. If the hash function is h(k) = k % 10, and you insert the keys 15, 25, and 35 sequentially, at which index will 35 be placed?",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "It will trigger an error"
+    ],
+    "correctIndex": 2,
+    "explanation": "15 hashes to index 5. 25 hashes to 5, collides, moves to index 6. 35 hashes to 5, collides with 15 at 5, collides with 25 at 6, and is placed at index 7.",
+    "difficulty": "hard",
+    "topic": "Hash Tables",
+    "category": "DSA"
+  },
+  {
+    "id": 3,
+    "question": "A browser's 'Back' and 'Forward' buttons mechanism is best implemented using which fundamental data structure?",
+    "options": [
+      "Two Stacks",
+      "One Queue",
+      "A Single Linked List",
+      "A Binary Search Tree"
+    ],
+    "correctIndex": 0,
+    "explanation": "Two stacks are ideal: one stack stores the history to go 'Back', and when you go back, the current page is pushed onto the 'Forward' stack.",
+    "difficulty": "easy",
+    "topic": "Stacks",
+    "category": "DSA"
+  },
+  {
+    "id": 4,
+    "question": "Which of the following sorting algorithms guarantees an O(N log N) time complexity in the worst-case scenario?",
+    "options": [
+      "Quick Sort",
+      "Bubble Sort",
+      "Merge Sort",
+      "Insertion Sort"
+    ],
+    "correctIndex": 2,
+    "explanation": "Merge Sort mathematically guarantees O(N log N) across all cases (best, average, worst). Quick Sort is generally faster in practice but degrades to O(N^2) in the worst case without optimizations.",
+    "difficulty": "medium",
+    "topic": "Sorting Algorithms",
+    "category": "DSA"
+  },
+  {
+    "id": 5,
+    "question": "You have a severely unbalanced binary search tree looking resembling a single linked list. What is the worst-case time complexity to search for a specific element in this tree?",
+    "options": [
+      "O(1)",
+      "O(log N)",
+      "O(N)",
+      "O(N log N)"
+    ],
+    "correctIndex": 2,
+    "explanation": "In an unbalanced BST that resembles a linked list, every node has only one child. Searching requires traversing every node sequentially, resulting in an O(N) time complexity.",
+    "difficulty": "medium",
+    "topic": "Trees",
+    "category": "DSA"
+  },
+  {
+    "id": 6,
+    "question": "You need to implement an 'Undo' feature in a text editor where the most recent action must be reverted first. Which data structure represents this 'Last-In, First-Out' (LIFO) behavior?",
+    "options": [
+      "Queue",
+      "Stack",
+      "Array",
+      "Graph"
+    ],
+    "correctIndex": 1,
+    "explanation": "A Stack operates on a LIFO principle. The most recently recorded state is placed on top of the stack and is the first state to be 'popped' off when Undo is triggered.",
+    "difficulty": "easy",
+    "topic": "Stacks",
+    "category": "DSA"
+  },
+  {
+    "id": 7,
+    "question": "When implementing a scheduling system for a hospital emergency room, patients must be treated based on the severity of their condition rather than their arrival time. Which data structure is explicitly designed for this?",
+    "options": [
+      "Standard Queue",
+      "Priority Queue (Heap)",
+      "Hash Map",
+      "B-Tree"
+    ],
+    "correctIndex": 1,
+    "explanation": "A Priority Queue (often implemented via a Min-Heap or Max-Heap) dequeues elements based on a priority ranking rather than simply FIFO matching the hospital's triage requirement.",
+    "difficulty": "medium",
+    "topic": "Priority Queues",
+    "category": "DSA"
+  },
+  {
+    "id": 8,
+    "question": "What is the primary advantage of storing elements in a Linked List over a standard contiguous Array?",
+    "options": [
+      "Linked lists provide O(1) random access to any element by its exact index.",
+      "Linked lists allow for O(1) constant time insertion and deletion at known positions without requiring contiguous memory shifting.",
+      "Linked lists consume significantly less memory overhead per element.",
+      "Linked lists are highly optimized for CPU caching."
+    ],
+    "correctIndex": 1,
+    "explanation": "Because a Linked List uses distinct dynamically allocated nodes connected by pointers, inserting or deleting an element only requires updating a couple of reference pointers, not shifting the entire array.",
+    "difficulty": "medium",
+    "topic": "Linked Lists",
+    "category": "DSA"
+  },
+  {
+    "id": 9,
+    "question": "If you are recursively searching through nested directories on a computer file system to print every filename, which graph traversal algorithm are you fundamentally employing?",
+    "options": [
+      "Breadth-First Search (BFS)",
+      "Depth-First Search (DFS)",
+      "Topological Sort",
+      "A* Search"
+    ],
+    "correctIndex": 1,
+    "explanation": "Recursive exploration of nested structures naturally follows a Depth-First Search (DFS) pattern, delving as deep down an entire directory branch as possible before backtracking.",
+    "difficulty": "easy",
+    "topic": "Graphs / Trees",
+    "category": "DSA"
+  },
+  {
+    "id": 10,
+    "question": "In the context of the Dynamic Programming paradigm, what does 'Memoization' refer to?",
+    "options": [
+      "Translating source code into lower-level assembly memory instructions.",
+      "A top-down approach where results of expensive recursive function calls are cached so they don't have to be blindly recomputed.",
+      "Allocating memory exclusively within the CPU's primary L1 cache.",
+      "A bottom-up iterative table-filling technique."
+    ],
+    "correctIndex": 1,
+    "explanation": "Memoization is a powerful optimization technique where the exact return values of previous recursive function calls are stored in a data structure (like a map).",
+    "difficulty": "medium",
+    "topic": "Dynamic Programming",
+    "category": "DSA"
+  },
+  {
+    "id": 11,
+    "question": "Which of the following problems is classic text-book example that is inherently solved efficiently using Dynamic Programming?",
+    "options": [
+      "Binary searching an ordered array",
+      "Calculating the Nth Fibonacci number in O(N) time",
+      "Finding the minimum spanning tree of a graph using Kruskal's",
+      "Iterating through a linked list"
+    ],
+    "correctIndex": 1,
+    "explanation": "A naive recursive Fibonacci calculation recalculates the same values exponentially leading to O(2^N). Using DP (Memoization or Tabulation) turns this overlapping subproblem into O(N).",
+    "difficulty": "medium",
+    "topic": "Dynamic Programming",
+    "category": "DSA"
+  },
+  {
+    "id": 12,
+    "question": "A developer writes a sorting function that splits an array perfectly in half repeatedly down to single elements, and then meticulously builds a new single sorted array by comparing elements while joining them back together. What sort is this?",
+    "options": [
+      "Selection Sort",
+      "Quick Sort",
+      "Merge Sort",
+      "Heap Sort"
+    ],
+    "correctIndex": 2,
+    "explanation": "Merge Sort uses a strict Divide-and-Conquer approach by dividing an array strictly in half until single elements remain, then 'merging' sorted sub-arrays together.",
+    "difficulty": "easy",
+    "topic": "Sorting Algorithms",
+    "category": "DSA"
+  },
+  {
+    "id": 13,
+    "question": "You have a massive sorted array of 1,000,000 usernames. To check if a specific username exists, you start at the first index and check every name until you find it. What is a drastically faster alternative?",
+    "options": [
+      "Interpolation Sort",
+      "Binary Search",
+      "Breadth-First Search",
+      "Depth-First Search"
+    ],
+    "correctIndex": 1,
+    "explanation": "A linear scan requires up to 1,000,000 checks O(N). Because the array is already sorted, Binary Search can repeatedly halve the search space, finding the name in exactly 20 checks O(log N).",
+    "difficulty": "easy",
+    "topic": "Searching Algorithms",
+    "category": "DSA"
+  },
+  {
+    "id": 14,
+    "question": "What specifically characterizes an 'AVL Tree' compared to a normal Binary Search Tree?",
+    "options": [
+      "An AVL tree limits each node to having exactly 3 children.",
+      "An AVL tree self-balances itself continuously so the heights of the two child subtrees of any node never differ by more than one.",
+      "An AVL tree does not store actual data, only pointers.",
+      "An AVL tree is optimally designed strictly for disk-storage rather than RAM."
+    ],
+    "correctIndex": 1,
+    "explanation": "An AVL tree is a strictly height-balanced BST. Every insertion or deletion enforces rotations to guarantee O(log N) lookup times, solving the 'linked list' degradation issue of normal BSTs.",
+    "difficulty": "hard",
+    "topic": "Trees",
+    "category": "DSA"
+  },
+  {
+    "id": 15,
+    "question": "Which algorithmic paradigm focuses on making the locally optimal choice blindly at each individual stage with the hope of eventually finding a global optimum, never rethinking its prior choices?",
+    "options": [
+      "Divide and Conquer",
+      "Dynamic Programming",
+      "Greedy Algorithm",
+      "Backtracking"
+    ],
+    "correctIndex": 2,
+    "explanation": "A Greedy algorithm aggressively takes the best immediate path available (e.g., Dijkstra's taking the shortest visible branch) and never backtracks to correct previous decisions.",
+    "difficulty": "medium",
+    "topic": "Algorithmic Paradigms",
+    "category": "DSA"
+  },
+  {
+    "id": 16,
+    "question": "A system uses a singly linked list to track pending orders. Each object has a pointer `next` to the following order. A bug causes an order's `next` pointer to randomly point to a previous order in the list. What algorithmic technique specifically detects this corruption?",
+    "options": [
+      "Floyd's Cycle-Finding Algorithm (Tortoise and Hare)",
+      "The Bellman-Ford equation",
+      "Binary Search",
+      "Dijkstra's Shortest Path"
+    ],
+    "correctIndex": 0,
+    "explanation": "Floyd's algorithm introduces two pointers moving at different speeds (one node per step vs two). If a loop exists in the linked list, the fast pointer will eventually logically catch up to the slow pointer from behind.",
+    "difficulty": "medium",
+    "topic": "Linked Lists",
+    "category": "DSA"
+  },
+  {
+    "id": 17,
+    "question": "In standard Big-O notation, what is the generally accepted time complexity for inserting a new value into an optimally implemented Hash Table with minimal collisions?",
+    "options": [
+      "O(N)",
+      "O(log N)",
+      "O(1)",
+      "O(N^2)"
+    ],
+    "correctIndex": 2,
+    "explanation": "A well-designed Hash Table calculates the index using a hash function instantly and stores the data at that dedicated index, taking O(1) or constant time.",
+    "difficulty": "easy",
+    "topic": "Hash Tables / Big O",
+    "category": "DSA"
+  },
+  {
+    "id": 18,
+    "question": "If you needed to design a 'Typeahead / Autocomplete' feature on a search engine where a user begins typing 'Appl...' and it instantly suggests 'Apple', 'Application', and 'Apply', which data structure is tailor-made for this?",
+    "options": [
+      "Linked List",
+      "Trie (Prefix Tree)",
+      "Max-Heap",
+      "Standard Binary Tree"
+    ],
+    "correctIndex": 1,
+    "explanation": "A Trie is exceptionally efficient for prefix searches. It organizes characters via nodes, so as the user types 'A-P-P-L', it navigates down to that exact node prefix and instantly retrieves all valid word endings below it.",
+    "difficulty": "medium",
+    "topic": "Advanced Trees",
+    "category": "DSA"
+  },
+  {
+    "id": 19,
+    "question": "A developer discovers their code is running in O(N!) time complexity. In terms of scalability as input N grows, what describes this performance profile best?",
+    "options": [
+      "It represents near real-time performance, comparable to O(log N).",
+      "It grows linearly, identical to O(N).",
+      "It is acceptable but requires significant RAM.",
+      "It represents Factorial growth; it is the absolute worst-case scenario and will essentially freeze executing even for inputs as small as N=15."
+    ],
+    "correctIndex": 3,
+    "explanation": "Factorial time O(N!) is disastrous for scaling. It is common in extremely naive brute-force combinatorial approaches (like finding permutation routes for the Traveling Salesman problem without optimization).",
+    "difficulty": "easy",
+    "topic": "Time Complexity (Big O)",
+    "category": "DSA"
+  },
+  {
+    "id": 20,
+    "question": "When building an optimal algorithm to identify the 'Kth Largest Element' in an unsorted stream of one million numbers, what data structure guarantees optimal performance without sorting the entire array?",
+    "options": [
+      "A Queue of size K",
+      "A Min-Heap of size K",
+      "A standard array of size N",
+      "A Hash Table"
+    ],
+    "correctIndex": 1,
+    "explanation": "A Min-Heap of size K correctly tracks the top K items. For each new number, if it is larger than the root (the minimum of the top K), you replace the root and quickly reheapify O(log K).",
+    "difficulty": "hard",
+    "topic": "Heaps",
+    "category": "DSA"
+  },
+  {
+    "id": 21,
+    "question": "In a social network application determining mutual friends, users are represented as points, and friendships are drawn as lines between them. What mathematical construct is this model?",
+    "options": [
+      "A Vector",
+      "A Graph containing Nodes and Edges",
+      "An isolated Binary Search Tree",
+      "A Multi-dimensional Array"
+    ],
+    "correctIndex": 1,
+    "explanation": "Relationships like friendships, map locations, or network topology are modeled via Graphs, utilizing Vertices (Nodes) for the entities and Edges (Lines) representing their relationships.",
+    "difficulty": "easy",
+    "topic": "Graphs",
+    "category": "DSA"
+  },
+  {
+    "id": 22,
+    "question": "What is the primary operational difference regarding how a Stack and a Queue systematically remove elements?",
+    "options": [
+      "A Stack removes elements based on alphabetical order, a Queue removes based on arbitrary priority.",
+      "A Stack operates as First-In, First-Out (FIFO) while a Queue acts as Last-In, First-Out (LIFO).",
+      "A Stack removes the most recently added element (LIFO), whereas a Queue removes the oldest waiting element (FIFO).",
+      "They are identical and the terms are used interchangeably depending on the language."
+    ],
+    "correctIndex": 2,
+    "explanation": "A queue functions strictly like waiting in a real-world checkout line (the first to enter is the first to leave - FIFO). A stack acts like plates piled vertically (you must remove the top latest plate first - LIFO).",
+    "difficulty": "easy",
+    "topic": "Data Structures Basics",
+    "category": "DSA"
+  },
+  {
+    "id": 23,
+    "question": "You have a massive dataset of a billion integer records stored on disk, heavily exceeding your computer's RAM. How can you effectively sort this dataset?",
+    "options": [
+      "Use an optimized Quick Sort algorithm directly in RAM.",
+      "Standardize the inputs and use Bubble Sort sequentially.",
+      "Implement an External Merge Sort, chunking data to RAM, sorting files locally, and mathematically merging them.",
+      "Store them in a local Hash Table and extract their keys in sequential order."
+    ],
+    "correctIndex": 2,
+    "explanation": "External Merge Sort is a class of sorting algorithms designed to handle huge datasets that don't fit into primary memory (RAM) by reading/writing small sublists sequentially from slower storage like disks.",
+    "difficulty": "hard",
+    "topic": "Sorting Algorithms",
+    "category": "DSA"
+  },
+  {
+    "id": 24,
+    "question": "What specifically is a 'Hash Collision' in Hash Maps?",
+    "options": [
+      "When the program crashes because the Map runs out of RAM.",
+      "When the user queries a key that explicitly does not exist in the Map.",
+      "When the mathematical hash function translates two entirely distinct unique keys into the exact same integer array index.",
+      "When you attempt to delete the root node of the Hash Table."
+    ],
+    "correctIndex": 2,
+    "explanation": "A hash collision happens whenever a hash function generates the exact same output for different inputs. Collisions are handled internally via techniques like Linked List Chaining or Linear Probing.",
+    "difficulty": "medium",
+    "topic": "Hash Tables",
+    "category": "DSA"
+  },
+  {
+    "id": 25,
+    "question": "Which algorithmic paradigm describes solving a labyrinth maze by stepping down a path until a dead end is reached, and then logically reversing your steps backwards until a new junction is discovered?",
+    "options": [
+      "Greedy Method",
+      "Dynamic Programming",
+      "Backtracking",
+      "Dijkstra Strategy"
+    ],
+    "correctIndex": 2,
+    "explanation": "Backtracking is an exhaustive algorithm utilizing recursion to build candidate solutions to a computational logic problem incrementally, immediately abandoning paths ('backtracking') as soon as it determines the path leads nowhere.",
+    "difficulty": "medium",
+    "topic": "Algorithmic Paradigms",
+    "category": "DSA"
+  },
+  {
+    "id": 26,
+    "question": "When traversing a Binary Search Tree specifically in 'In-Order' mode (Left child, Parent Root, Right child), what is guaranteed regarding the output?",
+    "options": [
+      "The output will exactly print the leaf nodes first.",
+      "The output guarantees the elements will be printed in perfect physically sorted ascending sequential order.",
+      "The layout replicates the physical level hierarchy of the tree from top to bottom.",
+      "The exact middle root element will consistently print last."
+    ],
+    "correctIndex": 1,
+    "explanation": "Due to the BST invariant (Left < Node < Right), evaluating the left subtree entirely, followed by printing the node value, followed by evaluating the right subtree guarantees sorted chronological output perfectly.",
+    "difficulty": "medium",
+    "topic": "Tree Traversals",
+    "category": "DSA"
+  },
+  {
+    "id": 27,
+    "question": "In Big-O Space Complexity, an algorithm recursively calling a function within itself N times without storing massive object arrays directly inside the variables must account for what hidden overhead?",
+    "options": [
+      "A minor CPU caching spike.",
+      "The O(N) memory consumed sequentially strictly tracking the underlying program Call Stack frames required to return to previous recursion states.",
+      "The hash table reallocation constant factor.",
+      "O(1) memory because the recursion parameters themselves represent very small primitive values."
+    ],
+    "correctIndex": 1,
+    "explanation": "Recursion isn't free. Every recursive call pushes the program's exact current local state, parameters, and return address onto the call stack creating invisible O(N) hidden memory overhead sequentially.",
+    "difficulty": "hard",
+    "topic": "Space Complexity",
+    "category": "DSA"
+  },
+  {
+    "id": 28,
+    "question": "Quick Sort relies deeply on picking a 'Pivot' element. What occurs efficiently during the physical partitioning sequence?",
+    "options": [
+      "The array physically splits into separate lists creating duplicates.",
+      "The algorithm merely ensures all smaller elements actively exist structurally to the left of the pivot point and all larger items dynamically shift to the right of the central pivot point logically.",
+      "It sums up the pivot elements into a secondary accumulator array.",
+      "The algorithm identifies the exact median of the total population dataset exclusively."
+    ],
+    "correctIndex": 1,
+    "explanation": "Quick Sort's partition operation rearranges an array so that logically, values less than the pivot come before it, and those greater come strictly after it. It doesn't instantly fully sort the halves, merely partitions them.",
+    "difficulty": "medium",
+    "topic": "Sorting Algorithms",
+    "category": "DSA"
+  },
+  {
+    "id": 29,
+    "question": "An undirected graph structure tracks computer servers. You must ensure there exists a functional, reliable pathway inter-connecting every server using minimum overall cable cord distance length. Which algorithmic concept correctly identifies this framework structure?",
+    "options": [
+      "A Minimum Spanning Tree (Like Kruskal's or Prim's logic)",
+      "Floyd-Warshall mapping",
+      "Breadth-First Search shortest path node count",
+      "A connected B-Tree topology"
+    ],
+    "correctIndex": 0,
+    "explanation": "A Minimum Spanning Tree fundamentally covers all given vertices connecting them with edges safely ensuring strict connectivity with the absolute minimum sum total of weights (cable length in this scenario).",
+    "difficulty": "medium",
+    "topic": "Graph Algorithms",
+    "category": "DSA"
+  },
+  {
+    "id": 30,
+    "question": "A team decides to use an Adjacency Matrix over an Adjacency List for storing graph network nodes. The graph contains 1,000,000 users but very sparse friendships (averaging 5 friends each). Why is this specific engineering architectural choice disastrous?",
+    "options": [
+      "The matrix calculates shortest path algorithms improperly.",
+      "The matrix evaluates recursive loops continuously shutting down processing capability entirely.",
+      "An Adjacency Matrix fundamentally utilizes V x V memory structure space. Allocating an array matrix of 1 million by 1 million physically exceeds system RAM capacities instantly when representing primarily totally empty non-connections.",
+      "Adjacency Lists are universally superior irrespective of structural design constraints regardless."
+    ],
+    "correctIndex": 2,
+    "explanation": "Adjacency matrices are extremely O(V^2) memory inefficient for sparse edge network graphs since they forcefully allocate 0s to explicitly document every non-existent line connecting between million point relationships.",
+    "difficulty": "hard",
+    "topic": "Graph Representations",
+    "category": "DSA"
+  }
+]

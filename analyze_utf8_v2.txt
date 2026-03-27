@@ -1,0 +1,6 @@
+Analyzing Ncs...                                                
+
+  error - Undefined name 'jsonList' - lib\screens\quiz_screen.dart:42:43 - undefined_identifier
+  error - Undefined name 'jsonList' - lib\screens\quiz_screen.dart:42:43 - undefined_identifier
+warning - Unused import: 'quiz_screen.dart' - lib\screens\result_screen.dart:6:8 - unused_import
+

@@ -1,0 +1,312 @@
+[
+  {
+    "id": 1,
+    "question": "A software team practices Agile Scrum methodology. During an active 2-week Sprint, roughly halfway through, the client demands an entirely new major feature be added immediately to the current Sprint's workload. According to Scrum principles, what is the correct response?",
+    "options": [
+      "The development team must immediately halt current tasks and start the new feature.",
+      "The Scrum Master approves the addition instantly if the client is paying.",
+      "The Product Owner adds the requested feature to the Product Backlog to be prioritized strictly for a future Sprint.",
+      "The team extends the Sprint duration from two weeks to four weeks inherently."
+    ],
+    "correctIndex": 2,
+    "explanation": "In Agile Scrum, once a Sprint Goal is committed to and the Sprint begins, the target scope should not drastically logically change structurally. New features belong in the Product Backlog for future prioritization.",
+    "difficulty": "medium",
+    "topic": "Agile Methodology",
+    "category": "Software Engineering"
+  },
+  {
+    "id": 2,
+    "question": "A developer writes a class 'OrderProcessor' that calculates discounts, validates credit cards, formats receipts to PDF, and sends confirmation emails. Which crucial SOLID design principle is violated here?",
+    "options": [
+      "Liskov Substitution Principle",
+      "Single Responsibility Principle (SRP)",
+      "Dependency Inversion Principle",
+      "Interface Segregation Principle"
+    ],
+    "correctIndex": 1,
+    "explanation": "The Single Responsibility Principle (SRP) states a class should have exactly one reason to change. This class handles logical discounts, PDF rendering, email formatting, and payment networking completely concurrently, making it a fragile Logical God Class.",
+    "difficulty": "medium",
+    "topic": "Software Design Principles",
+    "category": "Software Engineering"
+  },
+  {
+    "id": 3,
+    "question": "In the SDLC (Software Development Life Cycle), what is the 'Waterfall' model's primary characteristic?",
+    "options": ["It is continuous and iterative.", "It is a linear, sequential approach where each phase must be 100% complete before the next begins.", "It doesn't require any documentation.", "It is only used for small mobile apps."],
+    "correctIndex": 1,
+    "explanation": "The Waterfall model is traditional and rigid. Changes are difficult to implement once a phase (like Requirements) is signed off, making it less flexible than Agile for changing requirements.",
+    "difficulty": "easy",
+    "topic": "SDLC Models",
+    "category": "Software Engineering"
+  },
+  {
+    "id": 4,
+    "question": "What is the primary difference between 'White-Box Testing' and 'Black-Box Testing'?",
+    "options": ["White-box is for UI, black-box is for backend.", "Black-box testing focuses on functionality without knowing the internal code; White-box testing examines the internal logic and paths of the code itself.", "White-box is performed by users, black-box by developers.", "There is no difference."],
+    "correctIndex": 1,
+    "explanation": "White-box testing (or structural testing) requires knowledge of the source code. Black-box testing (functional testing) focuses on inputs and outputs based on requirements.",
+    "difficulty": "medium",
+    "topic": "Software Testing",
+    "category": "Software Engineering"
+  },
+  {
+    "id": 5,
+    "question": "A team is building a complex system and wants to ensure that a 'PaymentGateway' module doesn't depend directly on a concrete 'StripeTransaction' class. Instead, both should depend on a 'PaymentProcessor' interface. Which SOLID principle is this?",
+    "options": ["Open/Closed Principle", "Single Responsibility Principle", "Dependency Inversion Principle (DIP)", "Interface Segregation"],
+    "correctIndex": 2,
+    "explanation": "DIP instructs that high-level modules should not depend on low-level modules; both should depend on abstractions (interfaces). This makes the code decoupled and easier to swap components.",
+    "difficulty": "hard",
+    "topic": "SOLID Principles",
+    "category": "Software Engineering"
+  },
+  {
+    "id": 6,
+    "question": "What happens during 'Technical Debt' in software development?",
+    "options": ["It's the amount of money a company owes.", "It's the implied cost of future refactoring and bug-fixing caused by choosing an easy, fast solution now instead of a better, more robust approach.", "It's a type of cloud computing cost.", "It's a security vulnerability."],
+    "correctIndex": 1,
+    "explanation": "Like financial debt, if technical debt is not 'repaid' (via refactoring), the 'interest' (complexity and difficulty of adding new features) makes the project increasingly harder to maintain.",
+    "difficulty": "medium",
+    "topic": "Software Maintenance",
+    "category": "Software Engineering"
+  },
+  {
+    "id": 7,
+    "question": "What is 'Continuous Integration' (CI)?",
+    "options": ["Downloading software automatically.", "A practice where developers regularly merge their code changes into a central repository, after which automated builds and tests are run.", "Updating the server manually every night.", "Writing code in one sitting."],
+    "correctIndex": 1,
+    "explanation": "CI aims to detect integration bugs early and improve software quality by automating the assembly and validation of the codebase frequently.",
+    "difficulty": "easy",
+    "topic": "DevOps",
+    "category": "Software Engineering"
+  },
+  {
+    "id": 8,
+    "question": "In Git, what is the 'staging area' (or index) used for?",
+    "options": ["It's where deleted files go.", "It's an intermediate area where you prepare which specific changes will be included in the next commit.", "It's a backup of the entire server.", "It's for storing passwords."],
+    "correctIndex": 1,
+    "explanation": "The 'git add' command moves changes to the staging area. This allows you to selectively choose exactly what parts of your work go into a single logical commit.",
+    "difficulty": "easy",
+    "topic": "Version Control",
+    "category": "Software Engineering"
+  },
+  {
+    "id": 9,
+    "question": "Which design pattern is used to provide a single class that represent an entire subsystem, simplifying the API for a complex library of classes?",
+    "options": ["Observer Pattern", "Facade Pattern", "Singleton Pattern", "Strategy Pattern"],
+    "correctIndex": 1,
+    "explanation": "A Facade (like a customer service desk) provides a simple interface to a complex system (the warehouse, shipping, and billing departments) behind the scenes.",
+    "difficulty": "medium",
+    "topic": "Design Patterns",
+    "category": "Software Engineering"
+  },
+  {
+    "id": 10,
+    "question": "What is the goal of 'Regression Testing'?",
+    "options": ["To test how fast a program runs.", "To ensure that new code changes or bug fixes haven't accidentally broken existing functionality that previously worked correctly.", "To test the UI layout.", "To delete old code."],
+    "correctIndex": 1,
+    "explanation": "Regression tests are typically automated and run after every major change to preserve the stability of the entire system as it evolves.",
+    "difficulty": "easy",
+    "topic": "Software Testing",
+    "category": "Software Engineering"
+  },
+  {
+    "id": 11,
+    "question": "A system must be open for extension but closed for modification. This means you should be able to add new functionality without changing the existing source code of a class. Which SOLID principle is this?",
+    "options": ["Single Responsibility", "Open/Closed Principle (OCP)", "Liskov Substitution", "Interface Segregation"],
+    "correctIndex": 1,
+    "explanation": "OCP is typically achieved through inheritance or interfaces. Instead of modifying an existing class with a giant 'switch' statement, you create a new subclass or implementation.",
+    "difficulty": "hard",
+    "topic": "Design Principles",
+    "category": "Software Engineering"
+  },
+  {
+    "id": 12,
+    "question": "What is 'Unit Testing'?",
+    "options": ["Testing the whole system together.", "Testing small, individual components of code (like a single function or method) in isolation from the rest of the app.", "Testing the app on a phone.", "Testing how many users can login."],
+    "correctIndex": 1,
+    "explanation": "Unit tests are fast and help verify that an isolated piece of logic behaves exactly as expected, often using 'mocks' or 'stubs' to replace real database or network calls.",
+    "difficulty": "easy",
+    "topic": "Software Testing",
+    "category": "Software Engineering"
+  },
+  {
+    "id": 13,
+    "question": "Which Agile ceremony occurs at the end of a Sprint to demonstrate the 'Increment' to stakeholders and gather feedback?",
+    "options": ["Sprint Planning", "Daily Standup", "Sprint Review", "Sprint Retrospective"],
+    "correctIndex": 2,
+    "explanation": "The Sprint Review is focused on the 'What' (the product). The Sprint Retrospective (which happens after) is focused on the 'How' (improving the team's process).",
+    "difficulty": "medium",
+    "topic": "Agile Scrum",
+    "category": "Software Engineering"
+  },
+  {
+    "id": 14,
+    "question": "Which design pattern defines a one-to-many dependency between objects so that when one object changes state, all its dependents are notified automatically? (Used heavily in UI frameworks).",
+    "options": ["Singleton", "Factory", "Observer Pattern", "Adapter"],
+    "correctIndex": 2,
+    "explanation": "The Observer pattern (or Pub/Sub) is the foundation of event-driven programming, allowing components to react to changes without being tightly coupled.",
+    "difficulty": "medium",
+    "topic": "Design Patterns",
+    "category": "Software Engineering"
+  },
+  {
+    "id": 15,
+    "question": "What does a 'Burndown Chart' show in an Agile project?",
+    "options": ["Software bugs over time.", "The amount of work remaining in the Sprint Backlog compared to the time remaining in the Sprint.", "The number of employees in the company.", "The server temperature."],
+    "correctIndex": 1,
+    "explanation": "A burndown chart helps the team visualize their progress and predict if they will complete all tasks by the end of the Sprint.",
+    "difficulty": "easy",
+    "topic": "Agile Metrics",
+    "category": "Software Engineering"
+  },
+  {
+    "id": 16,
+    "question": "What is the primary goal of 'Refactoring'?",
+    "options": ["To add new features requested by the client.", "To rewrite code to improve its internal structure, readability, and maintainability without changing its external behavior.", "To fix critical security bugs.", "To speed up the network."],
+    "correctIndex": 1,
+    "explanation": "Refactoring is essential for reducing technical debt. It makes the code 'clean' and easier for future developers to understand and modify.",
+    "difficulty": "medium",
+    "topic": "Maintenance",
+    "category": "Software Engineering"
+  },
+  {
+    "id": 17,
+    "question": "Which of the following is a key advantage of using 'Microservices Architecture' compared to a 'Monolithic' architecture?",
+    "options": ["It is simpler and easier to build.", "It allows different services to be written in different languages, scaled independently, and deployed separately, which increases overall system resilience.", "It uses less memory.", "It doesn't require a network."],
+    "correctIndex": 1,
+    "explanation": "Microservices break a giant app into small, manageable pieces. If the 'Payment Service' crashes, the 'Product Catalog' and 'User Reviews' can still function.",
+    "difficulty": "hard",
+    "topic": "Software Architecture",
+    "category": "Software Engineering"
+  },
+  {
+    "id": 18,
+    "question": "In UML (Unified Modeling Language), what does a 'Class Diagram' primarily represent?",
+    "options": ["The user experience flow.", "The static structure of a system, showing its classes, their attributes, methods, and the relationships between objects (like inheritance or composition).", "The network topology.", "A timeline of project tasks."],
+    "correctIndex": 1,
+    "explanation": "Class diagrams are one of the most common UML diagrams, used to model the conceptual design of the software's data and logic.",
+    "difficulty": "medium",
+    "topic": "UML",
+    "category": "Software Engineering"
+  },
+  {
+    "id": 19,
+    "question": "What is 'Code Review' primarily used for?",
+    "options": ["To force developers to write faster.", "To check for bugs, improve code quality, ensure standards are followed, and share knowledge among the engineering team.", "To delete code that was written incorrectly.", "To monitor when people are working."],
+    "correctIndex": 1,
+    "explanation": "Code reviews are a social and technical process. Having a second pair of eyes often catches edge cases and structural flaws that the original author might have missed.",
+    "difficulty": "easy",
+    "topic": "Software Quality",
+    "category": "Software Engineering"
+  },
+  {
+    "id": 20,
+    "question": "Which 'Software License' allows anyone to use, modify, and distribute the software for any purpose, including commercially, as long as credit is given to the original author?",
+    "options": ["Proprietary License", "MIT License", "GPL (General Public License)", "EULA"],
+    "correctIndex": 1,
+    "explanation": "The MIT license is one of the most permissive open-source licenses. GPL is also open source but is 'copyleft', meaning derivative works must also be open source under GPL.",
+    "difficulty": "medium",
+    "topic": "Legal & Licensing",
+    "category": "Software Engineering"
+  },
+  {
+    "id": 21,
+    "question": "What is the primary characteristic of 'Test-Driven Development' (TDD)?",
+    "options": ["You write the tests after you finish the whole program.", "You write a failing test first, then write the bare minimum code to make it pass, and finally refactor.", "You only test the UI.", "Tests are optional."],
+    "correctIndex": 1,
+    "explanation": "TDD follows a 'Red-Green-Refactor' cycle. It ensures that every line of code is covered by a test and that the code is designed with testability in mind from the start.",
+    "difficulty": "hard",
+    "topic": "Software Testing",
+    "category": "Software Engineering"
+  },
+  {
+    "id": 22,
+    "question": "In Software Engineering, what is 'Coupling'?",
+    "options": ["The amount of logic in a single function.", "The degree of interdependence between software modules; low coupling is generally preferred for a modular system.", "Connecting wires to a server.", "A type of database indexing."],
+    "correctIndex": 1,
+    "explanation": "High coupling means a change in one class forces changes in many others. Low coupling makes the system easier to test and maintain.",
+    "difficulty": "medium",
+    "topic": "Design Concepts",
+    "category": "Software Engineering"
+  },
+  {
+    "id": 23,
+    "question": "What is 'Cohesion' in software design?",
+    "options": ["Merging two different companies.", "The degree to which the elements inside a module belong together; high cohesion is preferred (each module should do one thing well).", "How fast the code compiles.", "The amount of comments in a file."],
+    "correctIndex": 1,
+    "explanation": "High cohesion related strongly to the Single Responsibility Principle. A highly cohesive module is easy to understand and less likely to contain unrelated 'noisy' code.",
+    "difficulty": "medium",
+    "topic": "Design Concepts",
+    "category": "Software Engineering"
+  },
+  {
+    "id": 24,
+    "question": "A system must handle an increasing number of users by adding more identical web servers rather than upgrading the hardware of the existing servers. What type of scaling is this?",
+    "options": ["Vertical Scaling", "Horizontal Scaling", "Recursive Scaling", "Manual Scaling"],
+    "correctIndex": 1,
+    "explanation": "Horizontal scaling ('Scaling out') is the preferred approach for modern cloud applications because it is theoretically limitless and provides better fault tolerance than 'Scaling up'.",
+    "difficulty": "easy",
+    "topic": "Scaling",
+    "category": "Software Engineering"
+  },
+  {
+    "id": 25,
+    "question": "A 'Race Condition' is a flaw that occurs when...",
+    "options": ["The internet is too slow.", "The software's behavior depends on the uncontrolled order or timing of multiple threads accessing shared data simultaneously.", "The computer runs out of power.", "The developer writes code too fast."],
+    "correctIndex": 1,
+    "explanation": "Race conditions are hard to debug because they may only occur unpredictably. Synchronization (like locks) must be used to protect critical sections of code.",
+    "difficulty": "hard",
+    "topic": "Concurrency",
+    "category": "Software Engineering"
+  },
+  {
+    "id": 26,
+    "question": "Which document describes the full planned behavior of a software system, acting as a contract between the developer and the client?",
+    "options": ["User Manual", "SRS (Software Requirements Specification)", "Readme.md", "Design Document"],
+    "correctIndex": 1,
+    "explanation": "SRS documents include functional and non-functional requirements and are used to guide the development and validation of the final product.",
+    "difficulty": "medium",
+    "topic": "Documentation",
+    "category": "Software Engineering"
+  },
+  {
+    "id": 27,
+    "question": "What is 'Beta Testing'?",
+    "options": ["Testing code on the developer's computer.", "A second phase of software testing in which a sampling of the intended audience tries the product out before the final release.", "Testing the app in a laboratory setting.", "Testing the software's speed."],
+    "correctIndex": 1,
+    "explanation": "Beta testing follows 'Alpha' (internal) testing. It helps find real-world bugs and usability issues that the development team might have overlooked.",
+    "difficulty": "easy",
+    "topic": "Software Testing",
+    "category": "Software Engineering"
+  },
+  {
+    "id": 28,
+    "question": "In the context of software quality, what is 'MTTR'?",
+    "options": ["Main Time To Read", "Mean Time To Repair (the average time taken to fix a failure).", "Monthly Total Traffic Rate", "Maximum Theoretical Transfer Range"],
+    "correctIndex": 1,
+    "explanation": "MTTR is a key DevOps metric for measuring the efficiency of an organization's incident response and maintenance processes.",
+    "difficulty": "hard",
+    "topic": "DevOps Metrics",
+    "category": "Software Engineering"
+  },
+  {
+    "id": 29,
+    "question": "Which design pattern is used when you have two incompatible interfaces that need to work together? (Named after its physical electrical counterpart).",
+    "options": ["Singleton", "Factory", "Adapter Pattern", "Proxy"],
+    "correctIndex": 2,
+    "explanation": "The Adapter pattern converts the interface of a class into another interface the client expects. It allows classes to work together that couldn't otherwise because of incompatible interfaces.",
+    "difficulty": "medium",
+    "topic": "Design Patterns",
+    "category": "Software Engineering"
+  },
+  {
+    "id": 30,
+    "question": "What is the primary difference between 'Verification' and 'Validation'?",
+    "options": ["They are the same thing.", "Verification asks 'Are we building the product right?' (meets specs). Validation asks 'Are we building the right product?' (meets user needs).", "Verification is for code, Validation is for data.", "Validation happens before Verification."],
+    "correctIndex": 1,
+    "explanation": "Verification focuses on technical correctness against requirements. Validation focuses on the actual usefulness and business goal of the system.",
+    "difficulty": "hard",
+    "topic": "Software Quality",
+    "category": "Software Engineering"
+  }
+]

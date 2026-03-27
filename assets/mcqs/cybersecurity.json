@@ -1,0 +1,302 @@
+[
+  {
+    "id": 1,
+    "question": "An attacker intercepts a user's session cookie while they are authenticating over an unsecured public Wi-Fi network and successfully logs in as that user on a different machine. What type of attack explicitly defines this scenario?",
+    "options": ["SQL Injection", "Cross-Site Scripting (XSS)", "Session Hijacking (or Man-in-the-Middle)", "Phishing"],
+    "correctIndex": 2,
+    "explanation": "Session Hijacking occurs when an attacker sniffs a valid session token and impersonates the victim.",
+    "difficulty": "medium",
+    "topic": "Network Security",
+    "category": "Cybersecurity"
+  },
+  {
+    "id": 2,
+    "question": "A disgruntled former employee leaves a logic bomb in the company's payroll software. Which fundamental pillar of the CIA Triad is most directly threatened when this bomb executes and arbitrarily scrambles payroll data records?",
+    "options": ["Confidentiality", "Integrity", "Availability", "Authentication"],
+    "correctIndex": 1,
+    "explanation": "Integrity explicitly ensures data is accurate, reliable, and fundamentally unaltered by unauthorized modifications.",
+    "difficulty": "easy",
+    "topic": "Security Fundamentals",
+    "category": "Cybersecurity"
+  },
+  {
+    "id": 3,
+    "question": "A web application dynamically displays user-submitted comments on a forum without sanitizing special characters. An attacker submits `<script>alert(document.cookie);</script>`. What specific vulnerability does this demonstrate?",
+    "options": ["Cross-Site Request Forgery (CSRF)", "SQL Injection", "Stored Cross-Site Scripting (XSS)", "Command Injection"],
+    "correctIndex": 2,
+    "explanation": "Because the comment is permanently stored on the server and executed directly by visiting victims' browsers, it is a Stored XSS attack.",
+    "difficulty": "medium",
+    "topic": "Web Application Security",
+    "category": "Cybersecurity"
+  },
+  {
+    "id": 4,
+    "question": "During an outbreak, malware systematically encrypts all local network hard drives and demands Bitcoin logically for decryption. What malicious software accurately describes this?",
+    "options": ["Keylogger", "Ransomware", "Rootkit", "Adware"],
+    "correctIndex": 1,
+    "explanation": "Ransomware maliciously encrypts crucial victim files permanently, extorting cryptocurrency in exchanged for algorithmic decryption keys.",
+    "difficulty": "easy",
+    "topic": "Malware Types",
+    "category": "Cybersecurity"
+  },
+  {
+    "id": 5,
+    "question": "Which cryptographic algorithm utilizes two locked mathematical keys—a public key distributed freely to encrypt messages, and a strictly private key held securely by the recipient to decrypt those messages?",
+    "options": ["Symmetric Encryption (AES)", "Asymmetric Encryption (RSA)", "Hashing (SHA-256)", "Steganography"],
+    "correctIndex": 1,
+    "explanation": "Asymmetric encryption strategically solves initial key distribution issues natively by utilizing interlocking private/public mathematical key pairs.",
+    "difficulty": "medium",
+    "topic": "Cryptography",
+    "category": "Cybersecurity"
+  },
+  {
+    "id": 6,
+    "question": "A user receives an email that appears to be from their bank, informing them of 'unusual activity' and asking them to log in via a provided link. The link leads to a fake website that steals their credentials. What is this type of attack called?",
+    "options": ["Spear Phishing", "Whaling", "Phishing", "Vishing"],
+    "correctIndex": 2,
+    "explanation": "Phishing is a broad social engineering technique where attackers send mass emails or messages to trick people into revealing sensitive information or installing malware.",
+    "difficulty": "easy",
+    "topic": "Social Engineering",
+    "category": "Cybersecurity"
+  },
+  {
+    "id": 7,
+    "question": "What is the primary difference between a 'White Hat' and a 'Black Hat' hacker?",
+    "options": ["White hats use Linux, black hats use Windows.", "White hats perform ethical hacking with permission to find vulnerabilities; black hats perform unauthorized hacking for malicious purposes.", "White hats are self-taught, black hats have degrees.", "There is no difference."],
+    "correctIndex": 1,
+    "explanation": "The distinction lies in intent and authorization. Ethical hackers (White Hats) work with organizations to improve security, while malicious hackers (Black Hats) exploit vulnerabilities for gain or disruption.",
+    "difficulty": "easy",
+    "topic": "Security Professionalism",
+    "category": "Cybersecurity"
+  },
+  {
+    "id": 8,
+    "question": "A security professional discovers that a web server is susceptible to a 'Denial of Service' (DoS) attack that floods the target with overwhelming traffic. What is the most effective way to protect against a large-scale, distributed version (DDoS)?",
+    "options": ["Using a stronger password", "Implementing a Content Delivery Network (CDN) or DDoS mitigation service", "Uninstalling the web server software", "Increasing the CPU speed"],
+    "correctIndex": 1,
+    "explanation": "DDoS mitigation services or CDNs (like Cloudflare) use massive global networks to absorb and filter out malicious traffic before it reaches the origin server.",
+    "difficulty": "medium",
+    "topic": "Network Security",
+    "category": "Cybersecurity"
+  },
+  {
+    "id": 9,
+    "question": "Which security principle suggests that users and systems should only be given the minimum level of access necessary to perform their specific job functions?",
+    "options": ["Security through Obscurity", "Lease Privilege", "Defense in Depth", "Separation of Duties"],
+    "correctIndex": 1,
+    "explanation": "The Principle of Least Privilege (PoLP) minimizes the potential damage from a compromised account or system by limiting its reach to only what is absolutely required.",
+    "difficulty": "medium",
+    "topic": "Access Control",
+    "category": "Cybersecurity"
+  },
+  {
+    "id": 10,
+    "question": "What is the main purpose of 'Salting' a password before it is hashed and stored in a database?",
+    "options": ["To encrypt the password so it can be decrypted later.", "To add random data to the password so that identical passwords result in different hashes, protecting against Rainbow Table attacks.", "To make the password shorter.", "To check if the password contains special characters."],
+    "correctIndex": 1,
+    "explanation": "Salting ensures that even if two users have the same password, their stored hashes will be different. This prevents attackers from using pre-computed hash tables (Rainbow Tables) to reverse the hashes.",
+    "difficulty": "medium",
+    "topic": "Cryptography",
+    "category": "Cybersecurity"
+  },
+  {
+    "id": 11,
+    "question": "An organization implements multiple layers of security, including firewalls, antivirus, encryption, and physical security guards. Which security strategy does this represent?",
+    "options": ["Single Point of Failure", "Defense in Depth", "Isolation", "Redundancy"],
+    "correctIndex": 1,
+    "explanation": "Defense in Depth is an information security strategy that provides multiple layers of protection. If one layer fails, others are in place to block the attack.",
+    "difficulty": "easy",
+    "topic": "Security Strategy",
+    "category": "Cybersecurity"
+  },
+  {
+    "id": 12,
+    "question": "A Zero-Day vulnerability is discovered in a popular operating system. What does 'Zero-Day' specifically imply about this vulnerability?",
+    "options": ["It only affects software that is 0 days old.", "The vulnerability is known to the developer, and a patch is currently being released.", "The vulnerability is unknown to the software developer, and no patch or workaround is currently available.", "It will take 0 days to fix it."],
+    "correctIndex": 2,
+    "explanation": "A Zero-Day vulnerability is one that attackers exploit before the developer is even aware of it, giving users zero days to prepare or defend themselves.",
+    "difficulty": "hard",
+    "topic": "Vulnerabilities",
+    "category": "Cybersecurity"
+  },
+  {
+    "id": 13,
+    "question": "What is the primary function of a 'Digital Certificate' in the context of SSL/TLS and web security?",
+    "options": ["To verify the identity of a website and ensure that the connection is encrypted.", "To store a user's browser history.", "To speed up the connection to a website.", "To block malicious ads."],
+    "correctIndex": 0,
+    "explanation": "Digital certificates (SSL certificates) are issued by a trusted Certificate Authority (CA) to bind a public key to an organization's identity, ensuring that you are communicating with the real server.",
+    "difficulty": "medium",
+    "topic": "PKI",
+    "category": "Cybersecurity"
+  },
+  {
+    "id": 14,
+    "question": "An attacker uses a password-cracking script that tries every possible combination of characters (e.g., a, aa, ab, ac...) until the correct password is found. What is this type of attack called?",
+    "options": ["Dictionary Attack", "Brute Force Attack", "Social Engineering", "Keylogging"],
+    "correctIndex": 1,
+    "explanation": "A Brute Force attack involves systematically trying all possible combinations of characters. While effective against short or weak passwords, it is computationally expensive.",
+    "difficulty": "easy",
+    "topic": "Password Attacks",
+    "category": "Cybersecurity"
+  },
+  {
+    "id": 15,
+    "question": "Which of the following describes a 'Buffer Overflow' vulnerability in a program?",
+    "options": ["When a program consumes too much system RAM.", "When a program writes data beyond the boundaries of a pre-allocated block of memory (buffer), overwriting adjacent memory space.", "When a program crashes due to a syntax error.", "When a program downloads too much data from the internet."],
+    "correctIndex": 1,
+    "explanation": "A buffer overflow can allow an attacker to overwrite critical parts of a program's memory, such as return addresses, potentially leading to arbitrary code execution.",
+    "difficulty": "hard",
+    "topic": "Software Security",
+    "category": "Cybersecurity"
+  },
+  {
+    "id": 16,
+    "question": "To provide 'Two-Factor Authentication' (2FA), a system requires a password (something you know) and a one-time code generated by an app on the user's phone. What is the 'second factor' in this scenario?",
+    "options": ["Something you are", "Something you have", "Something you do", "Something you remember"],
+    "correctIndex": 1,
+    "explanation": "The phone (or the app on it) represents 'Something you have'. 2FA combines two or more different types of factors to significantly improve security.",
+    "difficulty": "easy",
+    "topic": "Authentication",
+    "category": "Cybersecurity"
+  },
+  {
+    "id": 17,
+    "question": "A 'Man-in-the-Middle' (MitM) attack occurs when an attacker sits between a user and a server, secretly intercepting and possibly altering their communication. Which protocol is designed to prevent this on the web?",
+    "options": ["HTTP", "HTTPS", "FTP", "SNMP"],
+    "correctIndex": 1,
+    "explanation": "HTTPS uses SSL/TLS to encrypt the data and verify the server's identity, making it much harder for an attacker to intercept or modify the traffic without being detected.",
+    "difficulty": "easy",
+    "topic": "Network Attacks",
+    "category": "Cybersecurity"
+  },
+  {
+    "id": 18,
+    "question": "What is the primary goal of 'Fuzz Testing' (Fuzzing) in software security?",
+    "options": ["To find spelling errors in the UI.", "To identify vulnerabilities or bugs by providing random, malformed, or unexpected input data to a program and observing how it behaves or crashes.", "To test the performance of a website under heavy load.", "To check if the code is readable."],
+    "correctIndex": 1,
+    "explanation": "Fuzzing is an automated software testing technique used to find implementation bugs (like buffer overflows or unhandled exceptions) by stressing the program's input handling.",
+    "difficulty": "hard",
+    "topic": "Software Testing",
+    "category": "Cybersecurity"
+  },
+  {
+    "id": 19,
+    "question": "An attacker targets a specific high-profile individual, such as a CEO or a government official, with a highly customized and convincing phishing email. What is this specific type of attack called?",
+    "options": ["Spamming", "Whaling", "Pharming", "Sniffing"],
+    "correctIndex": 1,
+    "explanation": "Whaling is a specialized form of spear phishing that targets 'big fish' like C-level executives in order to gain access to corporate secrets or authorize large financial transfers.",
+    "difficulty": "medium",
+    "topic": "Social Engineering",
+    "category": "Cybersecurity"
+  },
+  {
+    "id": 20,
+    "question": "Which security tool is primarily designed to sit at the network boundary and block or allow traffic based on predefined security rules (e.g., blocking all traffic from a specific IP)?",
+    "options": ["Intrusion Detection System (IDS)", "Firewall", "Antivirus", "Proxy Server"],
+    "correctIndex": 1,
+    "explanation": "Firewalls act as a barrier between a trusted internal network and an untrusted external network (like the internet), monitoring and controlling traffic based on security policies.",
+    "difficulty": "easy",
+    "topic": "Network Security",
+    "category": "Cybersecurity"
+  },
+  {
+    "id": 21,
+    "question": "What is the primary difference between 'Hashing' and 'Encryption'?",
+    "options": ["Hashing is for files, encryption is for messages.", "Hashing is a one-way process (you cannot easily get the original data back); encryption is a two-way process (it can be decrypted with a key).", "Hashing is always slower than encryption.", "There is no difference."],
+    "correctIndex": 1,
+    "explanation": "Hashing is used for integrity (checking if a file has changed) or password storage. Encryption is used for confidentiality (protecting the data from unauthorized readers).",
+    "difficulty": "medium",
+    "topic": "Cryptography",
+    "category": "Cybersecurity"
+  },
+  {
+    "id": 22,
+    "question": "An attacker uses a vulnerability in a web application to execute arbitrary commands directly on the server's operating system. What is this type of vulnerability called?",
+    "options": ["SQL Injection", "OS Command Injection", "Cross-Site Scripting (XSS)", "CSRF"],
+    "correctIndex": 1,
+    "explanation": "Command injection occurs when an application passes unsafe user-supplied data (forms, cookies, HTTP headers etc.) to a system shell, allowing attackers to run system commands.",
+    "difficulty": "hard",
+    "topic": "Application Security",
+    "category": "Cybersecurity"
+  },
+  {
+    "id": 23,
+    "question": "A 'Honey Pot' is used by security teams to catch or study attackers. What is it specifically?",
+    "options": ["A tool used to crack passwords.", "A decoy system or network designed to attract attackers by appearing vulnerable, allowing defenders to gather information on their techniques.", "A type of advanced firewall.", "A tool for encrypting hard drives."],
+    "correctIndex": 1,
+    "explanation": "Honey pots are deliberately left vulnerable to entice hackers. By monitoring how the attacker interacts with the honey pot, security professionals can learn about and improve their defenses.",
+    "difficulty": "medium",
+    "topic": "Security Strategy",
+    "category": "Cybersecurity"
+  },
+  {
+    "id": 24,
+    "question": "What is the main goal of 'Penetration Testing' (Pen-Testing)?",
+    "options": ["To fix all the bugs in a program.", "To simulate a real-world cyberattack against an organization's systems to find and document security weaknesses before a real attacker does.", "To monitor network traffic in real-time.", "To train employees on how to use computers."],
+    "correctIndex": 1,
+    "explanation": "Penetration testing is an authorized, proactive attempt to evaluate the security of an IT infrastructure by safely trying to exploit vulnerabilities.",
+    "difficulty": "medium",
+    "topic": "Security Assessment",
+    "category": "Cybersecurity"
+  },
+  {
+    "id": 25,
+    "question": "A user's computer is infected with a virus that hides itself by modifying the operating system's core functions, making it invisible to standard antivirus software. What is this type of malware called?",
+    "options": ["Worm", "Rootkit", "Adware", "Trojan"],
+    "correctIndex": 1,
+    "explanation": "Rootkits gain high-level (root/admin) access and essentially 'burrow' into the OS, hiding their presence and allowing the attacker to maintain persistent access.",
+    "difficulty": "hard",
+    "topic": "Malware",
+    "category": "Cybersecurity"
+  },
+  {
+    "id": 26,
+    "question": "A developer wants to prevent 'SQL Injection' in their web application. What is the most effective way to handle user input when performing database queries?",
+    "options": ["Using simple string concatenation for queries.", "Using Parameterized Queries (Prepared Statements).", "Filtering out single quotes manually.", "Hashing the user's input before querying."],
+    "correctIndex": 1,
+    "explanation": "Parameterized queries separate the query logic from the user-provided data, ensuring that the database treats the input as data only, not as executable code.",
+    "difficulty": "hard",
+    "topic": "Software Security",
+    "category": "Cybersecurity"
+  },
+  {
+    "id": 27,
+    "question": "Which protocol is primarily used for 'Remote Desktop' access on Windows, allowing a user to control a far-away computer as if they were sitting in front of it?",
+    "options": ["SSH", "RDP (Remote Desktop Protocol)", "VNC", "HTTP"],
+    "correctIndex": 1,
+    "explanation": "RDP is a proprietary protocol developed by Microsoft. While convenient, it is often targeted by attackers if left exposed to the internet without proper security measures.",
+    "difficulty": "easy",
+    "topic": "Remote Access",
+    "category": "Cybersecurity"
+  },
+  {
+    "id": 28,
+    "question": "What is 'Social Engineering' in the context of cybersecurity?",
+    "options": ["Writing code that fixes social media platforms.", "Manipulating or deceiving people into performing actions or divulging confidential information by exploiting human psychology.", "Building large-scale computer networks.", "Creating viral marketing campaigns for security products."],
+    "correctIndex": 1,
+    "explanation": "Social engineering attacks (like phishing, tailgating, or baiting) exploit human trust and curiosity rather than technical software vulnerabilities.",
+    "difficulty": "easy",
+    "topic": "Social Engineering",
+    "category": "Cybersecurity"
+  },
+  {
+    "id": 29,
+    "question": "Which type of 'Man-in-the-Middle' attack involves redirecting a user to a malicious website by poisoning the local network's mapping of IP addresses to domain names?",
+    "options": ["ARP Spoofing", "DNS Poisoning (or DNS Cache Poisoning)", "SSL Stripping", "Port Scanning"],
+    "correctIndex": 1,
+    "explanation": "DNS poisoning injects false information into a DNS resolver's cache, causing it to return an incorrect (malicious) IP address for a legitimate domain name.",
+    "difficulty": "medium",
+    "topic": "Network Attacks",
+    "category": "Cybersecurity"
+  },
+  {
+    "id": 30,
+    "question": "What does a 'Security Information and Event Management' (SIEM) system primarily do?",
+    "options": ["It's a type of antivirus.", "It collects, aggregates, and analyzes log data from various sources across an organization's network to detect and alert on potential security threats in real-time.", "It builds firewalls automatically.", "It stores employee passwords securely."],
+    "correctIndex": 1,
+    "explanation": "SIEM provide a centralized view of an organization's security posture by monitoring logs from servers, firewalls, and applications for suspicious patterns.",
+    "difficulty": "hard",
+    "topic": "Security Monitoring",
+    "category": "Cybersecurity"
+  }
+]

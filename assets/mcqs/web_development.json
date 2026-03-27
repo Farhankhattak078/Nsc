@@ -1,0 +1,312 @@
+[
+  {
+    "id": 1,
+    "question": "A web browser makes an HTTP GET request to an API endpoint. The server responds indicating that the resource requested does not exist. Which HTTP Status Code perfectly represents this scenario?",
+    "options": [
+      "200 OK",
+      "404 Not Found",
+      "500 Internal Server Error",
+      "301 Moved Permanently"
+    ],
+    "correctIndex": 1,
+    "explanation": "A 404 Not Found status code explicitly indicates that the server was successfully reached, but the specific URL or resource requested could not be located on the server.",
+    "difficulty": "easy",
+    "topic": "HTTP Status Codes",
+    "category": "Web Development"
+  },
+  {
+    "id": 2,
+    "question": "To save shopping cart data securely on a user's browser, which storage mechanism provides a strictly synchronous API and permanently retains the stored 5MB data across completely closing and reopening the browser window?",
+    "options": [
+      "Cookies",
+      "Local Storage (localStorage)",
+      "Session Storage (sessionStorage)",
+      "IndexedDB"
+    ],
+    "correctIndex": 1,
+    "explanation": "The localStorage API stores strings natively with no expiration date. Unlike sessionStorage (cleared when the tab closes) or Cookies (which are sent with every HTTP request), localStorage data persists identically between sessions seamlessly.",
+    "difficulty": "medium",
+    "topic": "Browser APIs",
+    "category": "Web Development"
+  },
+  {
+    "id": 3,
+    "question": "Which CSS property is technically utilized to create space inside an element, effectively increasing the distance between the content and the element's border?",
+    "options": ["Margin", "Padding", "Border", "Outline"],
+    "correctIndex": 1,
+    "explanation": "Padding is the spacing inside the element. Margin is the spacing outside the element, used to separate it from other surrounding elements.",
+    "difficulty": "easy",
+    "topic": "CSS Basics",
+    "category": "Web Development"
+  },
+  {
+    "id": 4,
+    "question": "A developer wants to ensure their website is 'Responsive'. What is the primary CSS tool used to apply different styles depending on the device's screen width (e.g., hiding a sidebar on mobile)?",
+    "options": ["Flexbox", "CSS Grid", "Media Queries (@media)", "Animations"],
+    "correctIndex": 2,
+    "explanation": "Media queries allow you to create conditional CSS rules based on the viewport size, enabling a layout to automatically adapt to phones, tablets, and desktops.",
+    "difficulty": "easy",
+    "topic": "Responsive Design",
+    "category": "Web Development"
+  },
+  {
+    "id": 5,
+    "question": "What is the primary difference between 'Client-Side Rendering' (CSR) and 'Server-Side Rendering' (SSR)?",
+    "options": ["CSR is for mobile, SSR is for web.", "In CSR, the browser downloads a minimal HTML page and JS handles the UI generation; in SSR, the server generates the full HTML content for every page request.", "SSR is always faster for every user.", "CSR doesn't use JavaScript."],
+    "correctIndex": 1,
+    "explanation": "SSR provides better SEO and faster 'First Contentful Paint' because the browser receives the pre-rendered page. CSR can feel more interactive like a desktop app once the initial JS bundle is loaded.",
+    "difficulty": "medium",
+    "topic": "Web Architecture",
+    "category": "Web Development"
+  },
+  {
+    "id": 6,
+    "question": "Which Javascript keyword is used to declare a variable that cannot be reassigned after its initial value is set, encouraging immutability?",
+    "options": ["var", "let", "const", "static"],
+    "correctIndex": 2,
+    "explanation": "Using 'const' prevents accidental reassignments, making the code more predictable and easier to debug than using 'let' or the older 'var'.",
+    "difficulty": "easy",
+    "topic": "JS Basics",
+    "category": "Web Development"
+  },
+  {
+    "id": 7,
+    "question": "What does a 'RESTful API' primarily use to perform CRUD (Create, Read, Update, Delete) operations?",
+    "options": ["SQL Commands", "HTTP Verbs (GET, POST, PUT, DELETE)", "JSON Objects", "Python Scripts"],
+    "correctIndex": 1,
+    "explanation": "REST (Representational State Transfer) utilizes standard HTTP methods as actions on resources (URLs) to maintain a stateless and scalable architectural style.",
+    "difficulty": "medium",
+    "topic": "API Design",
+    "category": "Web Development"
+  },
+  {
+    "id": 8,
+    "question": "A junior developer uses `==` to compare null and undefined in JavaScript (`null == undefined`). The result is `true`. Why is this behavior generally discouraged, and what should be used instead?",
+    "options": ["Use `===` (Strict Equality) because it checks both value and type, returning false for different types.", "Use `!=` because it is faster.", "JavaScript does not allow null comparison.", "Both are always equal."],
+    "correctIndex": 0,
+    "explanation": "The `==` operator performs type coercion, which can lead to confusing and non-intuitive results. Strict equality `===` is the industry standard for safe and predictable comparisons.",
+    "difficulty": "medium",
+    "topic": "JS Basics",
+    "category": "Web Development"
+  },
+  {
+    "id": 9,
+    "question": "What is the purpose of the 'Virtual DOM' in modern web frameworks like React or Vue?",
+    "options": ["To store large images on the server.", "To provide a lightweight in-memory representation of the real DOM, allowing the framework to calculate only the necessary changes before efficiently updating the browser.", "To bypass the need for HTML files.", "To encrypt the user's browser session."],
+    "correctIndex": 1,
+    "explanation": "Directly manipulating the real DOM is expensive. The Virtual DOM minimizes these updates, significantly improving the performance of complex and highly interactive web pages.",
+    "difficulty": "hard",
+    "topic": "Web Frameworks",
+    "category": "Web Development"
+  },
+  {
+    "id": 10,
+    "question": "In the context of Web Accessibility (a11y), what is the primary reason for including 'alt' text on <img> tags?",
+    "options": ["To make the website load faster.", "To provide a textual description of the image for visually impaired users who use screen readers, or if the image fails to load.", "To improve the image resolution.", "To track users."],
+    "correctIndex": 1,
+    "explanation": "Screen readers read the 'alt' attribute aloud. Without it, the image content is completely lost to users who cannot see it, which is a major accessibility violation.",
+    "difficulty": "easy",
+    "topic": "Accessibility",
+    "category": "Web Development"
+  },
+  {
+    "id": 11,
+    "question": "Which HTTP header is utilized by the server to tell the browser 'Never send this data to me over an unencrypted connection' (enforcing HTTPS)?",
+    "options": ["ETag", "Strict-Transport-Security (HSTS)", "Cache-Control", "Content-Type"],
+    "correctIndex": 1,
+    "explanation": "HSTS prevents 'Man-in-the-Middle' attacks like SSL Stripping by instructing the browser to only ever communicate with that domain using HTTPS.",
+    "difficulty": "hard",
+    "topic": "Web Security",
+    "category": "Web Development"
+  },
+  {
+    "id": 12,
+    "question": "What is 'Cross-Origin Resource Sharing' (CORS) in web development?",
+    "options": ["A way to share hard drives between servers.", "A browser security mechanism that allows or restricts a web page from making requests to a different domain than the one that served the web page.", "A tool for merging two different databases.", "A type of content delivery network."],
+    "correctIndex": 1,
+    "explanation": "CORS prevents malicious websites from reading sensitive data from another site (like your bank) while you are logged in, unless the server explicitly allows that origin.",
+    "difficulty": "medium",
+    "topic": "Web Security",
+    "category": "Web Development"
+  },
+  {
+    "id": 13,
+    "question": "Which CSS layout system is designed for one-dimensional layouts (either a row OR a column) and is excellent for centering elements or distributing space?",
+    "options": ["Floats", "CSS Grid", "Flexbox", "Absolute Positioning"],
+    "correctIndex": 2,
+    "explanation": "While CSS Grid is for 2D layouts (rows and columns), Flexbox is the standard for efficiently aligning items within a single container regardless of their size.",
+    "difficulty": "easy",
+    "topic": "CSS Layout",
+    "category": "Web Development"
+  },
+  {
+    "id": 14,
+    "question": "In JavaScript, what is a 'Closure'?",
+    "options": ["The process of closing a browser tab.", "A function that has access to the variables of its outer scope even after the outer function has finished executing.", "A syntax error that occurs when a bracket is missing.", "A way to hide private images."],
+    "correctIndex": 1,
+    "explanation": "Closures are a powerful feature used for data privatization and maintaining state in asynchronous callbacks.",
+    "difficulty": "hard",
+    "topic": "JS Advanced",
+    "category": "Web Development"
+  },
+  {
+    "id": 15,
+    "question": "A web developer wants to improve the SEO of their blog. Which HTML element should be used for the most important heading on every page?",
+    "options": ["<header>", "<h1>", "<title>", "<b>"],
+    "correctIndex": 1,
+    "explanation": "Search engines use <h1> tags as a primary indicator of what a page is about. There should usually be exactly one h1 per page.",
+    "difficulty": "easy",
+    "topic": "SEO",
+    "category": "Web Development"
+  },
+  {
+    "id": 16,
+    "question": "What is the primary role of a 'Web Worker' in JavaScript?",
+    "options": ["To automate the testing of the website.", "To run a script in a background thread, separate from the main execution thread of a web application, preventing UI freezes during heavy calculations.", "To manage the server's database.", "To download images faster."],
+    "correctIndex": 1,
+    "explanation": "JS is single-threaded. Web Workers allow you to perform heavy tasks (like image processing) without blocking the user from interacting with the UI.",
+    "difficulty": "medium",
+    "topic": "Performance",
+    "category": "Web Development"
+  },
+  {
+    "id": 17,
+    "question": "Which tool is commonly used by developers to 'Bundle' their hundreds of small JavaScript and CSS files into a few optimized files for production?",
+    "options": ["Postman", "Webpack (or Vite/Rollup)", "Docker", "Git"],
+    "correctIndex": 1,
+    "explanation": "Bundlers optimize the number of HTTP requests a browser must make, leading to much faster initial load times for complex web applications.",
+    "difficulty": "easy",
+    "topic": "Build Tools",
+    "category": "Web Development"
+  },
+  {
+    "id": 18,
+    "question": "What is 'Progressive Web App' (PWA) technology?",
+    "options": ["An app that only works on expensive phones.", "A web application that uses modern web APIs (like Service Workers) to provide a native-app-like experience, including offline access and push notifications.", "A website built with only HTML.", "A tool for making 3D games in the browser."],
+    "correctIndex": 1,
+    "explanation": "PWAs can be 'installed' on a home screen without going through an app store, combining the reach of the web with the functionality of native apps.",
+    "difficulty": "medium",
+    "topic": "Modern Web",
+    "category": "Web Development"
+  },
+  {
+    "id": 19,
+    "question": "In a JWT (JSON Web Token), which part contains the actual user information (like their ID or Role) and is usually BASE64-encoded?",
+    "options": ["Header", "Payload", "Signature", "Salt"],
+    "correctIndex": 1,
+    "explanation": "A JWT consists of Header (algorithm), Payload (data), and Signature (security). The payload should NOT contain sensitive data like passwords because it can be easily decoded by anyone.",
+    "difficulty": "medium",
+    "topic": "Authentication",
+    "category": "Web Development"
+  },
+  {
+    "id": 20,
+    "question": "Which CSS units are 'Relative' to the font-size of the current element?",
+    "options": ["px", "em", "rem", "vh"],
+    "correctIndex": 1,
+    "explanation": "'em' is relative to the current element's font size. 'rem' (root em) is relative to the <html> element's font size, making it much more predictable for global scaling.",
+    "difficulty": "medium",
+    "topic": "CSS Basics",
+    "category": "Web Development"
+  },
+  {
+    "id": 21,
+    "question": "What is the primary difference between `debounce` and `throttle` in JavaScript event handling?",
+    "options": ["They are synonyms.", "Debounce ensures a function is only called after a user has stopped an action for a period; throttle ensures a function is only called once per X milliseconds during a continuous action.", "Throttle is for mouse clicks, debounce is for typing.", "Throttle is faster than debounce."],
+    "correctIndex": 1,
+    "explanation": "Throttle is perfect for scroll events (to save performance), while Debounce is perfect for search input fields (to wait until the user stops typing).",
+    "difficulty": "hard",
+    "topic": "Performance",
+    "category": "Web Development"
+  },
+  {
+    "id": 22,
+    "question": "Which HTTP method should be used correctly to update an ENTIRE resource on the server, replacing it with the provided representation?",
+    "options": ["POST", "PATCH", "PUT", "GET"],
+    "correctIndex": 2,
+    "explanation": "PUT is idempotent and replaces the whole resource. PATCH is used for partial updates (e.g., just updating the user's email).",
+    "difficulty": "medium",
+    "topic": "API Design",
+    "category": "Web Development"
+  },
+  {
+    "id": 23,
+    "question": "To prevent 'Prop Drilling' in a large React application, what built-in hook provides a way to share data (like a theme or user info) globally to any component in the tree?",
+    "options": ["useState", "useEffect", "useContext", "useMemo"],
+    "correctIndex": 2,
+    "explanation": "The Context API allows you to avoid passing props through deep layers of components that don't need them, simplifying state management.",
+    "difficulty": "medium",
+    "topic": "Web Frameworks",
+    "category": "Web Development"
+  },
+  {
+    "id": 24,
+    "question": "What is 'Semantic HTML'?",
+    "options": ["HTML that uses very small files.", "Using HTML tags (like <article>, <nav>, <section>) that clearly describe the meaning and structure of the content to both the browser and the developer.", "Writing HTML in a different language.", "A type of CSS framework."],
+    "correctIndex": 1,
+    "explanation": "Semantic HTML improves SEO and accessibility by providing context to browsers and screen readers about the purpose of each section.",
+    "difficulty": "easy",
+    "topic": "HTML Basics",
+    "category": "Web Development"
+  },
+  {
+    "id": 25,
+    "question": "Which CSS property is technically used to control the stacking order of elements that overlap? (Higher values appear 'closer' to the user).",
+    "options": ["opacity", "display", "z-index", "position"],
+    "correctIndex": 2,
+    "explanation": "z-index only works on elements that have a 'position' other than 'static' (like relative, absolute, or fixed).",
+    "difficulty": "easy",
+    "topic": "CSS Layout",
+    "category": "Web Development"
+  },
+  {
+    "id": 26,
+    "question": "What is 'Tree Shaking' in modern JavaScript build processes?",
+    "options": ["Deleting old files from a folder.", "The process of removing unused code (dead code) from the final bundle during building, which results in smaller file sizes and faster loads.", "Organizing files into a tree structure.", "A type of recursive algorithm."],
+    "correctIndex": 1,
+    "explanation": "Modern bundlers use static analysis of ES modules (import/export) to safely determine which parts of a library are actually being used by your app.",
+    "difficulty": "hard",
+    "topic": "Build Tools",
+    "category": "Web Development"
+  },
+  {
+    "id": 27,
+    "question": "Which browser API allows a web application to efficiently cache its own assets so that it can work entirely offline?",
+    "options": ["localStorage", "SessionStorage", "Service Worker", "XMLHttpRequest"],
+    "correctIndex": 2,
+    "explanation": "Service Workers act as a proxy between the browser and the network, allowing the developer to intercept requests and serve cached content even without an internet connection.",
+    "difficulty": "medium",
+    "topic": "Modern Web",
+    "category": "Web Development"
+  },
+  {
+    "id": 28,
+    "question": "A web application feels sluggish when the user enters data into a form with 100 fields. How can the developer optimize this to ensure only the changed field updates?",
+    "options": ["Using a faster server.", "Implementing 'Controlled Components' with memoization (e.g., React.memo) to prevent unnecessary re-renders of the entire form.", "Deleting the form.", "Increasing the browser's RAM."],
+    "correctIndex": 1,
+    "explanation": "In large apps, preventing redundant UI updates is the most effective way to maintain 60FPS interactivity.",
+    "difficulty": "hard",
+    "topic": "Performance",
+    "category": "Web Development"
+  },
+  {
+    "id": 29,
+    "question": "What is the primary reason to use 'SVG' (Scalable Vector Graphics) instead of JPG or PNG for a company logo?",
+    "options": ["SVG files are always larger.", "SVGs use mathematical paths instead of pixels, meaning they can be scaled to any size without losing quality (they never get blurry).", "SVGs are older technology.", "SVGs are strictly for photographs."],
+    "correctIndex": 1,
+    "explanation": "SVGs are perfect for icons, logos, and illustrations because of their crispness on high-DPI displays and their small file size for simple graphics.",
+    "difficulty": "easy",
+    "topic": "Web Assets",
+    "category": "Web Development"
+  },
+  {
+    "id": 30,
+    "question": "Which of these perfectly describes 'State Management' in a web application context?",
+    "options": ["Managing the server's location.", "The process of storing and updating the 'source of truth' for the data being displayed in the UI (e.g., is the user logged in, what's in their shopping cart?).", "Managing the browser's cookies.", "Connecting to a database."],
+    "correctIndex": 1,
+    "explanation": "As apps grow complex, managing state across hundreds of components requires dedicated patterns (like Redux, Vuex, or React Context) to keep the UI in sync with the data.",
+    "difficulty": "medium",
+    "topic": "Web Frameworks",
+    "category": "Web Development"
+  }
+]

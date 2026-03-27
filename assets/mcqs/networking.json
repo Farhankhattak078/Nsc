@@ -1,0 +1,302 @@
+[
+  {
+    "id": 1,
+    "question": "In the OSI framework, which layer is responsible for logically addressing devices across different networks (using IP addresses) and routing packets optimally to their destination?",
+    "options": ["Data Link Layer", "Network Layer", "Transport Layer", "Application Layer"],
+    "correctIndex": 1,
+    "explanation": "The Network Layer (Layer 3) handles logical IP addressing and relies on routers to map and pathway packets across different global networks.",
+    "difficulty": "medium",
+    "topic": "OSI Model",
+    "category": "Networking"
+  },
+  {
+    "id": 2,
+    "question": "A developer needs to build an application for live video streaming. Dropping a few frames is entirely acceptable, but any delay or latency caused by waiting for retransmissions will ruin the real-time experience. Which Transport protocol is strictly required?",
+    "options": ["TCP (Transmission Control Protocol)", "UDP (User Datagram Protocol)", "HTTP (Hypertext Transfer Protocol)", "FTP (File Transfer Protocol)"],
+    "correctIndex": 1,
+    "explanation": "UDP is a 'connectionless' protocol that does not guarantee delivery. By skipping the overhead of three-way handshakes and error-checking/retransmission, UDP is much faster and perfect for live streaming.",
+    "difficulty": "medium",
+    "topic": "Network Protocols",
+    "category": "Networking"
+  },
+  {
+    "id": 3,
+    "question": "You type 'www.google.com' into your browser. Your computer only understands numerical IP addresses, not human words. Which specialized network service actively translates that domain name into a routable IP address?",
+    "options": ["DHCP Server", "DNS Server (Domain Name System)", "NAT Router (Network Address Translation)", "ARP Protocol"],
+    "correctIndex": 1,
+    "explanation": "DNS acts as the phonebook of the internet. It maps human-readable domain strings (like google.com) to their corresponding IPv4 or IPv6 numeric coordinates required for routing.",
+    "difficulty": "easy",
+    "topic": "Web Infrastructure",
+    "category": "Networking"
+  },
+  {
+    "id": 4,
+    "question": "To allow thousands of corporate laptops to share a single public IP address when accessing the internet, the company firewall must dynamically translate their internal private IP addresses to the single public IP. What technology enables this?",
+    "options": ["VLANs (Virtual Local Area Networks)", "NAT (Network Address Translation)", "BGP (Border Gateway Protocol)", "Packet Sniffing"],
+    "correctIndex": 1,
+    "explanation": "NAT (specifically PAT/Overload) manipulates the headers of packets crossing the router, swapping the private source IP for the router's public IP, and tracking the outgoing port numbers to route replies backward.",
+    "difficulty": "hard",
+    "topic": "Network Architecture",
+    "category": "Networking"
+  },
+  {
+    "id": 5,
+    "question": "A network engineer wants to secure data in transit between a user's web browser and a banking server. Which protocol structurally provides this encrypted SSL/TLS tunnel?",
+    "options": ["HTTP", "HTTPS", "SSH", "Telnet"],
+    "correctIndex": 1,
+    "explanation": "HTTPS (Hypertext Transfer Protocol Secure) encapsulates standard HTTP communications inside an encrypted transport layer (TLS/SSL), ensuring confidentiality and server authenticity during web transit.",
+    "difficulty": "easy",
+    "topic": "Network Security Protocols",
+    "category": "Networking"
+  },
+  {
+    "id": 6,
+    "question": "A switch consistently receives frames meant for a specific MAC address but doesn't have it in its CAM table. It then sends the frame out of every port except the one it arrived on. What is this behavior called?",
+    "options": ["Broadcasting", "Unicast Flooding", "Multicasting", "ARP Spoofing"],
+    "correctIndex": 1,
+    "explanation": "When a switch doesn't know the destination MAC, it performs Unicast Flooding to find the device. Once the device responds, the switch records the MAC and port in its CAM table to avoid future flooding.",
+    "difficulty": "medium",
+    "topic": "Switching",
+    "category": "Networking"
+  },
+  {
+    "id": 7,
+    "question": "Your organization is transitioning to IPv6. During the audit, you notice that IPv6 addresses are 128 bits long. Approximately how many unique addresses does this provide compared to IPv4's 4.3 billion?",
+    "options": ["About 8 billion", "340 undecillion (3.4 x 10^38)", "1 trillion", "1 quadrillion"],
+    "correctIndex": 1,
+    "explanation": "IPv6 uses 128-bit addresses, allowing for 2^128 addresses (340 undecillion). This is designed to provide enough addresses for every atom on the surface of the earth, solving IPv4 address depletion.",
+    "difficulty": "easy",
+    "topic": "IP Addressing",
+    "category": "Networking"
+  },
+  {
+    "id": 8,
+    "question": "A network administrator divides a large Class C network into four smaller subnets to reduce broadcast traffic and improve security. What is the correct Subnet Mask for these '/26' networks?",
+    "options": ["255.255.255.0", "255.255.255.128", "255.255.255.192", "255.255.255.224"],
+    "correctIndex": 2,
+    "explanation": "A /26 mask means 26 bits are set for the network. In the last octet, that's 11000000 in binary, which equals 192 (128 + 64).",
+    "difficulty": "medium",
+    "topic": "Subnetting",
+    "category": "Networking"
+  },
+  {
+    "id": 9,
+    "question": "When a new device connects to a Wi-Fi network, it automatically receives an IP address, gateway, and DNS info without manual configuration. Which protocol manages this dynamic assignment?",
+    "options": ["ARP", "DHCP (Dynamic Host Configuration Protocol)", "ICMP", "IGMP"],
+    "correctIndex": 1,
+    "explanation": "DHCP automates the assignment of IP addresses and other network parameters, preventing IP conflicts and simplifying network management for mobile devices.",
+    "difficulty": "easy",
+    "topic": "Network Services",
+    "category": "Networking"
+  },
+  {
+    "id": 10,
+    "question": "An attacker sends fake ARP messages onto a Local Area Network to link their MAC address with the IP address of the default gateway. What is the primary goal of this 'ARP Poisoning' attack?",
+    "options": ["To crash the router", "To perform a Man-in-the-Middle (MitM) attack", "To steal the Wi-Fi password", "To increase network speed"],
+    "correctIndex": 1,
+    "explanation": "ARP Poisoning allows an attacker to intercept, modify, or stop data intended for the gateway, effectively placing themselves in the middle of all outgoing traffic.",
+    "difficulty": "hard",
+    "topic": "Network Security",
+    "category": "Networking"
+  },
+  {
+    "id": 11,
+    "question": "Which routing protocol is considered the 'protocol of the Internet,' responsible for exchanging routing information between different Autonomous Systems (AS) across the globe?",
+    "options": ["OSPF", "EIGRP", "BGP (Border Gateway Protocol)", "RIP"],
+    "correctIndex": 2,
+    "explanation": "BGP is a Path Vector protocol used to route traffic between ISPs and large organizations. It is the core protocol that makes global internet routing possible.",
+    "difficulty": "hard",
+    "topic": "Routing Protocols",
+    "category": "Networking"
+  },
+  {
+    "id": 12,
+    "question": "A large corporate office uses a Link-State routing protocol that calculates the shortest path to a destination based on bandwidth, and it reacts very quickly to topology changes. Which protocol is this?",
+    "options": ["RIP", "BGP", "OSPF (Open Shortest Path First)", "Telnet"],
+    "correctIndex": 2,
+    "explanation": "OSPF is a widely used interior gateway protocol (IGP). It uses the Dijkstra algorithm to build a complete map of the network and find the most efficient path.",
+    "difficulty": "medium",
+    "topic": "Routing Protocols",
+    "category": "Networking"
+  },
+  {
+    "id": 13,
+    "question": "You use the 'ping' command to check if a remote server is reachable. Which protocol is actually transmitting the 'Echo Request' and 'Echo Reply' messages?",
+    "options": ["TCP", "UDP", "ICMP (Internet Control Message Protocol)", "ARP"],
+    "correctIndex": 2,
+    "explanation": "ICMP is used by network devices to send error messages and operational information. Ping and Traceroute both rely on ICMP to function.",
+    "difficulty": "easy",
+    "topic": "Diagnostics",
+    "category": "Networking"
+  },
+  {
+    "id": 14,
+    "question": "A systems administrator needs to remotely manage a Linux server. They must choose between Telnet and SSH. Why is SSH the industry standard choice?",
+    "options": ["SSH is faster than Telnet", "SSH encrypts the entire session, whereas Telnet sends everything (including passwords) in plain text", "Telnet only works on Windows", "SSH doesn't require a password"],
+    "correctIndex": 1,
+    "explanation": "SSH (Secure Shell) uses public-key cryptography to secure the communication. Telnet is insecure because an attacker can easily sniff the network and capture credentials.",
+    "difficulty": "easy",
+    "topic": "Management",
+    "category": "Networking"
+  },
+  {
+    "id": 15,
+    "question": "To handle extreme spikes in web traffic, a company deploys multiple web servers behind a single virtual IP. What device is responsible for distributing incoming requests among these servers?",
+    "options": ["Router", "Load Balancer", "Hub", "Repeater"],
+    "correctIndex": 1,
+    "explanation": "Load Balancers distribute network or application traffic across a cluster of servers to improve reliability, increase capacity, and prevent any single server from becoming a bottleneck.",
+    "difficulty": "medium",
+    "topic": "Architecture",
+    "category": "Networking"
+  },
+  {
+    "id": 16,
+    "question": "A security device monitors incoming packets and remembers the state of active connections (e.g., it knows if an incoming packet is a response to a request sent from inside). What type of firewall is this?",
+    "options": ["Stateless Firewall", "Packet Filter", "Stateful Inspection Firewall", "Proxy Server"],
+    "correctIndex": 2,
+    "explanation": "Stateful firewalls track the state of network connections (TCP streams, UDP communication) and can distinguish legitimate packets for different types of connections.",
+    "difficulty": "medium",
+    "topic": "Security",
+    "category": "Networking"
+  },
+  {
+    "id": 17,
+    "question": "An employee works from home and needs to access internal files on the company's private server as if they were in the office. Which technology creates this secure 'tunnel' over the public internet?",
+    "options": ["VLAN", "VPN (Virtual Private Network)", "NAT", "DNS"],
+    "correctIndex": 1,
+    "explanation": "A VPN extends a private network across a public network. It allows users to send and receive data as if their computing devices were directly connected to the private network.",
+    "difficulty": "easy",
+    "topic": "Remote Access",
+    "category": "Networking"
+  },
+  {
+    "id": 18,
+    "question": "To prevent the Sales department's computers from seeing the broadcast traffic of the Engineering department's computers on the same physical switch, which technology should be implemented?",
+    "options": ["STP", "VLAN (Virtual Local Area Network)", "BGP", "RIP"],
+    "correctIndex": 1,
+    "explanation": "VLANs allow a network administrator to partition a physical switch into multiple logical networks, effectively isolating broadcast domains even if devices are on the same hardware.",
+    "difficulty": "medium",
+    "topic": "Switching",
+    "category": "Networking"
+  },
+  {
+    "id": 19,
+    "question": "A network technician accidentally connects two switches with two different cables, creating a physical loop. Which protocol automatically detects this and blocks one of the ports to prevent a 'broadcast storm'?",
+    "options": ["ARP", "DHCP", "STP (Spanning Tree Protocol)", "OSPF"],
+    "correctIndex": 2,
+    "explanation": "STP ensures a loop-free topology for any bridged Ethernet local area network. It builds a tree that spans all the switches in the network and disables redundant paths.",
+    "difficulty": "hard",
+    "topic": "Switching",
+    "category": "Networking"
+  },
+  {
+    "id": 20,
+    "question": "A gamer wants to host a public Minecraft server from their home computer. Their router's firewall blocks incoming connections by default. What must they configure to allow external players to reach their local PC on port 25565?",
+    "options": ["DHCP Reservation", "Port Forwarding", "MAC Filtering", "VLAN Tagging"],
+    "correctIndex": 1,
+    "explanation": "Port Forwarding (or DNAT) instructs the router to send traffic arriving on a specific external port to a specific internal IP address and port.",
+    "difficulty": "easy",
+    "topic": "NAT",
+    "category": "Networking"
+  },
+  {
+    "id": 21,
+    "question": "To reduce latency for global users, a video sharing platform stores copies of popular videos on servers located closer to the users' physical locations. What is this system called?",
+    "options": ["Load Balancer", "CDN (Content Delivery Network)", "Proxy Server", "Data Center"],
+    "correctIndex": 1,
+    "explanation": "A CDN is a geographically distributed network of proxy servers and their data centers. The goal is to provide high availability and performance by distributing the service spatially relative to end users.",
+    "difficulty": "medium",
+    "topic": "Architecture",
+    "category": "Networking"
+  },
+  {
+    "id": 22,
+    "question": "What is the primary difference between a Forward Proxy and a Reverse Proxy?",
+    "options": ["A forward proxy protects the server, a reverse proxy protects the client.", "A forward proxy sits in front of clients to hide their identity; a reverse proxy sits in front of servers to handle load balancing and security.", "Forward proxies are only for HTTP, reverse proxies are for TCP.", "There is no difference."],
+    "correctIndex": 1,
+    "explanation": "A Forward Proxy (like in a school) handles requests from clients going out. A Reverse Proxy (like Nginx in front of a web app) handles requests from the internet coming into a server group.",
+    "difficulty": "hard",
+    "topic": "Architecture",
+    "category": "Networking"
+  },
+  {
+    "id": 23,
+    "question": "An IoT developer needs a lightweight messaging protocol with low overhead to send sensor data from thousands of small devices to a central cloud server. Which protocol is most suitable?",
+    "options": ["HTTP", "FTP", "MQTT (Message Queuing Telemetry Transport)", "SMTP"],
+    "correctIndex": 2,
+    "explanation": "MQTT is a publish-subscribe based messaging protocol. It is designed for connections with remote locations where a 'small code footprint' is required or the network bandwidth is limited.",
+    "difficulty": "hard",
+    "topic": "IoT Protocols",
+    "category": "Networking"
+  },
+  {
+    "id": 24,
+    "question": "Which protocol is primarily used by network management tools to collect and organize information about managed devices on IP networks (like routers, switches, and printers)?",
+    "options": ["ICMP", "SNMP (Simple Network Management Protocol)", "SMTP", "POP3"],
+    "correctIndex": 1,
+    "explanation": "SNMP exposes management data in the form of variables on the managed systems, which describe the system configuration. These variables can then be queried (and sometimes set) by managing applications.",
+    "difficulty": "medium",
+    "topic": "Management",
+    "category": "Networking"
+  },
+  {
+    "id": 25,
+    "question": "Modern Wi-Fi security (WPA3) provides better protection against 'Offline Dictionary Attacks' compared to WPA2. Which mechanism did WPA3 introduce to achieve this during the initial handshake?",
+    "options": ["Pre-Shared Keys (PSK)", "Simultaneous Authentication of Equals (SAE)", "WEP Encryption", "TKIP"],
+    "correctIndex": 1,
+    "explanation": "SAE (also known as the Butterfly Exchange) replaces the vulnerable 4-way handshake of WPA2, making it much harder for attackers to crack passwords even if they capture the handshake.",
+    "difficulty": "hard",
+    "topic": "Wireless Security",
+    "category": "Networking"
+  },
+  {
+    "id": 26,
+    "question": "Why is Fiber Optic cabling preferred over Copper (UTP) for long-distance, high-bandwidth connections between data centers?",
+    "options": ["Fiber is cheaper to install", "Fiber uses light pulses and is immune to Electromagnetic Interference (EMI), whereas copper is susceptible to it over long distances.", "Fiber cables are easier to bend", "Copper can only transmit analog signals"],
+    "correctIndex": 1,
+    "explanation": "Fiber uses light instead of electricity. It has much lower attenuation (signal loss) and much higher bandwidth capacity, and it cannot be affected by power lines or lightning.",
+    "difficulty": "easy",
+    "topic": "Physical Layer",
+    "category": "Networking"
+  },
+  {
+    "id": 27,
+    "question": "A network administrator sees a device with a MAC address of '00:00:00:00:00:00' on the network, which is impossible for a real NIC. What is likely happening?",
+    "options": ["The device is turned off", "The device is performing MAC Address Spoofing", "The switch is broken", "The cables are loose"],
+    "correctIndex": 1,
+    "explanation": "MAC Spoofing is a technique for changing a factory-assigned MAC address of a network interface. Attackers use it to bypass access control lists or stay anonymous.",
+    "difficulty": "medium",
+    "topic": "Layer 2 Security",
+    "category": "Networking"
+  },
+  {
+    "id": 28,
+    "question": "A router receives a 1500-byte packet but needs to send it over a link that only supports a 1280-byte MTU (Maximum Transmission Unit). What must the router do unless the 'Don't Fragment' bit is set?",
+    "options": ["Drop the packet", "Perform Fragmentation", "Compressed the data", "Increase the link size"],
+    "correctIndex": 1,
+    "explanation": "Fragmentation is the process of breaking a single IP datagram into multiple smaller packets that can fit through a link with a smaller MTU. The destination host reassembles them.",
+    "difficulty": "medium",
+    "topic": "IP Layer",
+    "category": "Networking"
+  },
+  {
+    "id": 29,
+    "question": "A company uses the same IP address for multiple servers located in different parts of the world. Global routing protocols send users to the server that is 'closest' in terms of network hops. What type of routing is this?",
+    "options": ["Unicast", "Multicast", "Anycast", "Broadcast"],
+    "correctIndex": 2,
+    "explanation": "Anycast is a network addressing and routing methodology in which a single destination address has multiple routing paths to two or more endpoint destinations. It is commonly used for DNS and CDNs.",
+    "difficulty": "hard",
+    "topic": "Routing",
+    "category": "Networking"
+  },
+  {
+    "id": 30,
+    "question": "A network investigator uses a tool to capture and analyze raw packets traveling across a network interface to troubleshoot a slow connection. Which tool are they most likely using?",
+    "options": ["Antivirus", "Packet Sniffer (like Wireshark)", "Web Browser", "Text Editor"],
+    "correctIndex": 1,
+    "explanation": "Packet sniffers (or Protocol Analyzers) intercept and log traffic that passes over a digital network. They allow for deep inspection of individual headers and payloads.",
+    "difficulty": "easy",
+    "topic": "Diagnostics",
+    "category": "Networking"
+  }
+]

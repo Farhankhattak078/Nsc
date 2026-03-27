@@ -1,0 +1,302 @@
+[
+  {
+    "id": 1,
+    "question": "You have an unsorted array of 1 million integers and need to find if a specific number exists. You can only look at each number once. What is the Big O time complexity of this 'Linear Search'?",
+    "options": ["O(1)", "O(log n)", "O(n)", "O(n^2)"],
+    "correctIndex": 2,
+    "explanation": "In the worst case (Linear Search), you must examine every single element in the array to conclude the target isn't there, leading to a linear time complexity relative to the number of elements.",
+    "difficulty": "easy",
+    "topic": "Complexity",
+    "category": "Problem Solving"
+  },
+  {
+    "id": 2,
+    "question": "A developer needs to sort a list of 10 items. Complexity is not an issue, but memory is extremely limited. Which sorting algorithm is known for being 'In-Place' and very simple to implement with minimal overhead?",
+    "options": ["Merge Sort", "Bubble Sort", "Quick Sort", "Radix Sort"],
+    "correctIndex": 1,
+    "explanation": "While slow (O(n^2)), Bubble Sort and Selection Sort are in-place algorithms that require only a constant amount O(1) of additional memory, making them suitable for ultra-low-memory environments.",
+    "difficulty": "easy",
+    "topic": "Algorithms",
+    "category": "Problem Solving"
+  },
+  {
+    "id": 3,
+    "question": "In a 'Breadth-First Search' (BFS) on a graph, which data structure is strictly required to keep track of the next nodes to visit?",
+    "options": ["Stack", "Queue", "Priority Queue", "Hash Table"],
+    "correctIndex": 1,
+    "explanation": "BFS explores level by level. A Queue (FIFO) ensures that nodes are processed in the order they were discovered, which is the defining characteristic of breadth-first traversal.",
+    "difficulty": "medium",
+    "topic": "Graph Theory",
+    "category": "Problem Solving"
+  },
+  {
+    "id": 4,
+    "question": "An algorithm uses a 'Divide and Conquer' strategy, splitting a problem into two halves, recursively solving them, and merging the results. What is the average time complexity of this approach (e.g., Merge Sort)?",
+    "options": ["O(n)", "O(n log n)", "O(n^2)", "O(2^n)"],
+    "correctIndex": 1,
+    "explanation": "Dividing the problem takes logarithmic time (base 2), and merging the results takes linear time. Combined, this results in the highly efficient O(n log n) complexity typical of advanced sorting.",
+    "difficulty": "medium",
+    "topic": "Complexity",
+    "category": "Problem Solving"
+  },
+  {
+    "id": 5,
+    "question": "You are designing a system to handle 'Undo' and 'Redo' operations in a text editor. Which data structure is the most logical choice for managing the history of actions so the most recent action is always reversed first?",
+    "options": ["Queue", "Stack", "LinkedList", "Binary Tree"],
+    "correctIndex": 1,
+    "explanation": "A Stack follows Last-In-First-Out (LIFO). When you perform an undo, you want to retrieve the very last action you performed, making the stack the perfect architectural fit.",
+    "difficulty": "easy",
+    "topic": "Data Structures",
+    "category": "Problem Solving"
+  },
+  {
+    "id": 6,
+    "question": "A developer is writing a recursive function to calculate the Fibonacci sequence. Without optimization, the function calculates the same values over and over again. What technique should be used to store these results and avoid redundant work?",
+    "options": ["Backtracking", "Memoization (Dynamic Programming)", "Binary Search", "Heuristic Analysis"],
+    "correctIndex": 1,
+    "explanation": "Memoization involves caching the results of expensive function calls and returning the cached result when the same inputs occur again, turning an exponential O(2^n) problem into a linear O(n) one.",
+    "difficulty": "medium",
+    "topic": "Dynamic Programming",
+    "category": "Problem Solving"
+  },
+  {
+    "id": 7,
+    "question": "What is the key characteristic of a 'Greedy Algorithm'?",
+    "options": ["It tries every possible combination to find the absolute best solution.", "It makes the locally optimal choice at each step with the hope of finding a global optimum.", "It uses a lot of RAM.", "It only works on small datasets."],
+    "correctIndex": 1,
+    "explanation": "Greedy algorithms are often fast but don't always find the perfect solution (e.g., finding the shortest path in a graph without considering future consequences).",
+    "difficulty": "medium",
+    "topic": "Algorithm Design",
+    "category": "Problem Solving"
+  },
+  {
+    "id": 8,
+    "question": "You have a sorted array of names. To find a specific name using the least amount of comparisons possible, which algorithm is most efficient?",
+    "options": ["Linear Search", "Binary Search", "Interpolation Search", "Hashing"],
+    "correctIndex": 1,
+    "explanation": "Binary search repeatedly divides the search interval in half. For a sorted list, it is exponentially faster than linear search, with a time complexity of O(log n).",
+    "difficulty": "easy",
+    "topic": "Algorithms",
+    "category": "Problem Solving"
+  },
+  {
+    "id": 9,
+    "question": "What does 'Big O Notation' specifically describe in computer science?",
+    "options": ["The actual number of seconds a program runs.", "The upper bound of the time or space complexity of an algorithm, describing how performance scales as the input size grows.", "The number of lines of code in a program.", "The size of the hard drive needed to store the code."],
+    "correctIndex": 1,
+    "explanation": "Big O allows developers to compare the efficiency of different algorithms independently of the hardware they are running on.",
+    "difficulty": "medium",
+    "topic": "Complexity",
+    "category": "Problem Solving"
+  },
+  {
+    "id": 10,
+    "question": "In a 'Depth-First Search' (DFS) on a tree, the algorithm visits the leftmost branch completely down to the leaf before moving to the next branch. Which data structure is used natively by the computer's recursion to manage this?",
+    "options": ["Queue", "Stack", "Heap", "B-Tree"],
+    "correctIndex": 1,
+    "explanation": "Recursion uses the 'Call Stack' to keep track of active function calls. This naturally follows a LIFO pattern, making DFS a stack-based algorithm.",
+    "difficulty": "medium",
+    "topic": "Graph Theory",
+    "category": "Problem Solving"
+  },
+  {
+    "id": 11,
+    "question": "Which data structure is the most efficient for building a system that requires constant time O(1) for both inserting new items and looking up items by a unique key?",
+    "options": ["Binary Search Tree", "Linked List", "Hash Table (Dictionary/Map)", "Sorted Array"],
+    "correctIndex": 2,
+    "explanation": "Hash tables use a hash function to compute an index into an array of buckets, allowing for nearly instantaneous access regardless of the dataset size.",
+    "difficulty": "easy",
+    "topic": "Data Structures",
+    "category": "Problem Solving"
+  },
+  {
+    "id": 12,
+    "question": "Consider the 'Traveling Salesperson Problem' (TSP), where you must find the shortest route connecting many cities. This problem is known to be 'NP-Hard'. What does this practically mean for developers?",
+    "options": ["It is impossible to solve.", "There is no known algorithm that can solve it perfectly in a reasonable 'Polynomial' time for large numbers of cities.", "It can only be solved with a supercomputer.", "It is a simple problem with a linear solution."],
+    "correctIndex": 1,
+    "explanation": "For NP-Hard/NP-Complete problems, we usually settle for 'Heuristics' or 'Approximation' algorithms that find a 'good enough' solution quickly.",
+    "difficulty": "hard",
+    "topic": "Complexity",
+    "category": "Problem Solving"
+  },
+  {
+    "id": 13,
+    "question": "In a Binary Search Tree (BST), what is the time complexity to find a node if the tree is 'perfectly balanced'?",
+    "options": ["O(1)", "O(log n)", "O(n)", "O(n log n)"],
+    "correctIndex": 1,
+    "explanation": "Each comparison in a balanced BST eliminates half of the remaining nodes, leading to logarithmic time complexity.",
+    "difficulty": "medium",
+    "topic": "Data Structures",
+    "category": "Problem Solving"
+  },
+  {
+    "id": 14,
+    "question": "A developer writes a recursive function that calls itself millions of times without a proper exit condition. What type of error will this most likely cause?",
+    "options": ["Memory Leak", "Stack Overflow", "Segmentation Fault", "Timeout"],
+    "correctIndex": 1,
+    "explanation": "Each recursive call adds a new frame to the stack. If the stack's limited memory is exceeded, the program crashes with a StackOverflowError.",
+    "difficulty": "easy",
+    "topic": "Debugging",
+    "category": "Problem Solving"
+  },
+  {
+    "id": 15,
+    "question": "Which algorithm is commonly used to find the shortest distance between two nodes in a weighted graph (e.g., GPS navigation finding the fastest route)?",
+    "options": ["Binary Search", "Dijkstra's Algorithm", "Bubble Sort", "Quick Sort"],
+    "correctIndex": 1,
+    "explanation": "Dijkstra's algorithm is a greedy algorithm that finds the shortest path by maintaining the shortest distance to every node from the starting point.",
+    "difficulty": "medium",
+    "topic": "Algorithms",
+    "category": "Problem Solving"
+  },
+  {
+    "id": 16,
+    "question": "What is 'Space Complexity' in algorithm analysis?",
+    "options": ["How much physical space a computer takes up.", "The amount of memory (RAM) an algorithm requires to run relative to the input size.", "The number of lines of code in the program.", "The size of the output file."],
+    "correctIndex": 1,
+    "explanation": "An algorithm that creates a new copy of an input array of size N has O(N) space complexity. An algorithm that sorts the array in-place has O(1) space complexity.",
+    "difficulty": "medium",
+    "topic": "Complexity",
+    "category": "Problem Solving"
+  },
+  {
+    "id": 17,
+    "question": "You have a list of tasks with specific deadlines and need to schedule them to maximize profit. Which algorithmic strategy is most likely to provide the optimal solution?",
+    "options": ["Greedy Algorithm", "Dynamic Programming", "Brute Force", "Randomized Search"],
+    "correctIndex": 1,
+    "explanation": "Dynamic Programming is used when a problem can be broken down into overlapping subproblems, allowing you to build up the optimal solution systematically.",
+    "difficulty": "hard",
+    "topic": "Algorithm Design",
+    "category": "Problem Solving"
+  },
+  {
+    "id": 18,
+    "question": "What is the primary difference between a 'List' (like an ArrayList) and a 'Set'?",
+    "options": ["Lists are faster than sets.", "Sets automatically prevent duplicate entries, while Lists allow multiple identical elements and maintain a specific order.", "Lists are only for numbers, Sets are for text.", "There is no difference."],
+    "correctIndex": 1,
+    "explanation": "Sets are modeled after mathematical sets. If you add the same string twice to a Set, it will only store it once.",
+    "difficulty": "easy",
+    "topic": "Data Structures",
+    "category": "Problem Solving"
+  },
+  {
+    "id": 19,
+    "question": "In a Min-Heap (a type of Binary Tree), where is the smallest value in the entire dataset always located?",
+    "options": ["The leftmost leaf.", "The root node.", "The rightmost leaf.", "It could be anywhere."],
+    "correctIndex": 1,
+    "explanation": "A Min-Heap maintains the property that the parent node is always smaller than or equal to its children. This makes retrieving the minimum value an O(1) operation.",
+    "difficulty": "hard",
+    "topic": "Data Structures",
+    "category": "Problem Solving"
+  },
+  {
+    "id": 20,
+    "question": "Which sorting algorithm is often used by system-level 'sort()' functions because it is fast (O(log n) average) and can be implemented with very little extra memory (In-Place)?",
+    "options": ["Merge Sort", "Quick Sort", "Insertion Sort", "Selection Sort"],
+    "correctIndex": 1,
+    "explanation": "While Merge Sort is stable, it requires O(N) extra space. Quick Sort is typically faster in practice and space-efficient (O(log N) stack space).",
+    "difficulty": "medium",
+    "topic": "Algorithms",
+    "category": "Problem Solving"
+  },
+  {
+    "id": 21,
+    "question": "What is 'Amortized Analysis' in the context of data structures (e.g., resizing an ArrayList)?",
+    "options": ["How much the software costs to build.", "The average cost of an operation over a long sequence of operations, even if one specific operation is much more expensive than the others.", "The speed of the CPU.", "A type of security audit."],
+    "correctIndex": 1,
+    "explanation": "Resizing an ArrayList is O(N), but it only happens rarely. Most 'add' operations are O(1). The long-term average (amortized) cost is therefore O(1).",
+    "difficulty": "hard",
+    "topic": "Complexity",
+    "category": "Problem Solving"
+  },
+  {
+    "id": 22,
+    "question": "To efficiently find the common elements between two large arrays of size N and M, which approach is generally the best?",
+    "options": ["Use a nested loop to compare every item in N with every item in M (O(N*M)).", "Convert one array into a Hash Set and then iterate through the other array checking for existence (O(N+M)).", "Sort both arrays and use two pointers (O(N log N)).", "Both B and C are much better than A."],
+    "correctIndex": 3,
+    "explanation": "A nested loop is extremely inefficient. Using a Hash Set or sorting with two pointers reduces the problem from quadratic to linear or log-linear complexity.",
+    "difficulty": "medium",
+    "topic": "Algorithm Logic",
+    "category": "Problem Solving"
+  },
+  {
+    "id": 23,
+    "question": "In a Linked List, what is the time complexity to insert a new node at the very beginning of the list?",
+    "options": ["O(1)", "O(log n)", "O(n)", "O(n^2)"],
+    "correctIndex": 0,
+    "explanation": "Inserting at the head of a linked list only requires updating two pointers (the new node's next pointer and the head pointer), making it a constant-time operation regardless of the list's length.",
+    "difficulty": "easy",
+    "topic": "Data Structures",
+    "category": "Problem Solving"
+  },
+  {
+    "id": 24,
+    "question": "What is the primary drawback of using an extremely large Hash Map with a bad hash function?",
+    "options": ["It uses too much memory.", "It causes 'Hash Collisions', where many different keys map to the same bucket, degrading performance from O(1) toward O(n) linear search.", "It will crash the computer.", "It can only store small integers."],
+    "correctIndex": 1,
+    "explanation": "A good hash function distributes keys uniformly. A bad one causes many items to stack in the same bucket, essentially turning the map into a slow linked list.",
+    "difficulty": "hard",
+    "topic": "Data Structures",
+    "category": "Problem Solving"
+  },
+  {
+    "id": 25,
+    "question": "An algorithm has O(n!) complexity. For an input size of 10, it completes in 1 second. Approximately how much longer will it take for an input size of 11?",
+    "options": ["About 2 seconds", "About 11 seconds", "About 1 minute", "About 1 hour"],
+    "correctIndex": 1,
+    "explanation": "Factorial complexity (n!) grows extremely fast. For an input of n+1, it takes (n+1) times as much work as an input of n. 11 * 1 second = 11 seconds.",
+    "difficulty": "hard",
+    "topic": "Complexity",
+    "category": "Problem Solving"
+  },
+  {
+    "id": 26,
+    "question": "Why is 'Tail Recursion Transformation' an important optimization in some programming languages?",
+    "options": ["It makes the code look cleaner.", "It allows a recursive function call to be converted into a simple loop (iteration), preventing a Stack Overflow for deeply recursive calls.", "It speeds up network requests.", "It automatically adds comments to the code."],
+    "correctIndex": 1,
+    "explanation": "If the recursive call is the last thing a function does, the current stack frame can be reused, making the recursion as memory-efficient as a standard 'while' loop.",
+    "difficulty": "hard",
+    "topic": "Algorithms",
+    "category": "Problem Solving"
+  },
+  {
+    "id": 27,
+    "question": "You need to store a set of boolean flags for 1,000,000 users. To save as much memory as possible, which data structure should you use?",
+    "options": ["An array of Booleans", "A Bitset (or Bit Array)", "A SQL table", "A JSON file"],
+    "correctIndex": 1,
+    "explanation": "A Bitset uses exactly 1 bit per flag. A standard Boolean array often uses 8 or 32 bits per flag (due to memory alignment), making the Bitset 8 to 32 times more memory efficient.",
+    "difficulty": "medium",
+    "topic": "Data Structures",
+    "category": "Problem Solving"
+  },
+  {
+    "id": 28,
+    "question": "In a graph, what is a 'Cycle'?",
+    "options": ["A very fast processor loop.", "A path that starts and ends at the same node, visiting at least one edge.", "The amount of time it takes to sort an array.", "A type of sorting algorithm."],
+    "correctIndex": 1,
+    "explanation": "Detecting cycles is critical for preventing infinite loops in algorithms and ensuring that a graph is a 'DAG' (Directed Acyclic Graph) before performing operations like Topological Sort.",
+    "difficulty": "easy",
+    "topic": "Graph Theory",
+    "category": "Problem Solving"
+  },
+  {
+    "id": 29,
+    "question": "Which algorithmic principle is used to find all possible solutions to a problem (like solving a Sudoku or a maze) by trying one path and then 'backing up' when a dead-end is reached?",
+    "options": ["Divide and Conquer", "Backtracking", "Hashing", "Encryption"],
+    "correctIndex": 1,
+    "explanation": "Backtracking is a form of recursion that systematically explores the state space, pruning branches that are invalid to find one or all valid solutions efficiently.",
+    "difficulty": "medium",
+    "topic": "Algorithm Design",
+    "category": "Problem Solving"
+  },
+  {
+    "id": 30,
+    "question": "You work for a company that needs to sort a truly massive dataset that is too large to fit in the server's RAM. Which sorting variant should you use?",
+    "options": ["Quick Sort", "In-Place Sort", "External Merge Sort", "B-Tree Sort"],
+    "correctIndex": 2,
+    "explanation": "External sorting algorithms use the disk (secondary storage). They sort small chunks in RAM, write them back to disk, and then merge the sorted chunks together.",
+    "difficulty": "medium",
+    "topic": "Algorithms",
+    "category": "Problem Solving"
+  }
+]

@@ -1,0 +1,302 @@
+[
+  {
+    "id": 1,
+    "question": "A business analyst needs to immediately retrieve all customer records from an SQL database table specifically where the 'Status' column is 'Active'. What specifies the exact filter required?",
+    "options": ["ORDER BY", "HAVING", "WHERE", "GROUP BY"],
+    "correctIndex": 2,
+    "explanation": "The 'WHERE' clause mathematically functions to restrict SQL query outputs by selectively applying boolean criteria directly to underlying database rows prior to generating results.",
+    "difficulty": "easy",
+    "topic": "SQL Queries",
+    "category": "Database"
+  },
+  {
+    "id": 2,
+    "question": "In a relational database, you define a column in a 'Orders' table that references the Primary Key of a 'Customers' table. This establishes a structural link ensuring you cannot create an order for a customer that does not exist. What is this column called?",
+    "options": ["Foreign Key", "Composite Key", "Unique Constraint", "Candidate Key"],
+    "correctIndex": 0,
+    "explanation": "A Foreign Key establishes referential integrity between two tables. It ensures that the value in the child table must strictly match an existing Primary Key value in the parent table.",
+    "difficulty": "medium",
+    "topic": "Relational Databases",
+    "category": "Database"
+  },
+  {
+    "id": 3,
+    "question": "To significantly speed up search queries on a 'LastName' column in a massive users table containing 10 million rows, which database structure should you implement?",
+    "options": ["Trigger", "Stored Procedure", "Index", "View"],
+    "correctIndex": 2,
+    "explanation": "An Index acts like the index at the back of a book. Instead of sequentially scanning 10 million rows (Full Table Scan), the database traverses a B-Tree index to instantly find the row locations.",
+    "difficulty": "medium",
+    "topic": "Database Optimization",
+    "category": "Database"
+  },
+  {
+    "id": 4,
+    "question": "Your banking application transfers $100 from Account A to Account B. This involves two steps: deducting A, and crediting B. If the server crashes after deducting A but before crediting B, the transaction must completely roll back as if it never happened. Which ACID property ensures this \"all or nothing\" execution?",
+    "options": ["Atomicity", "Consistency", "Isolation", "Durability"],
+    "correctIndex": 0,
+    "explanation": "Atomicity ensures that a transaction is treated as a single, indivisible logical unit of work. If any part of the transaction fails, the entire transaction is rolled back sequentially.",
+    "difficulty": "hard",
+    "topic": "Database Architecture",
+    "category": "Database"
+  },
+  {
+    "id": 5,
+    "question": "Which type of NoSQL database is specifically optimized for storing and efficiently querying highly connected data, such as social network friends, recommendation engines, and fraud detection rings?",
+    "options": ["Document Store (like MongoDB)", "Key-Value Store (like Redis)", "Graph Database (like Neo4j)", "Columnar Database (like Cassandra)"],
+    "correctIndex": 2,
+    "explanation": "Graph databases utilize 'Nodes' for entities and 'Edges' for relationships natively. Traversing a complex web of deep friendships in a Graph DB is exponentially faster than executing massive JOINs in an RDBMS.",
+    "difficulty": "medium",
+    "topic": "NoSQL Concepts",
+    "category": "Database"
+  },
+  {
+    "id": 6,
+    "question": "When designing a large-scale database, what is the goal of 'Normalization'?",
+    "options": ["To increase data redundancy for faster lookups.", "To organize data into related tables, minimize duplicate data (redundancy), and ensure data integrity.", "To merge all tables into one single large flat file.", "To encrypt the database files."],
+    "correctIndex": 1,
+    "explanation": "Normalization involves breaking a large table into smaller, logically related tables to prevent anomalies (like delete/update anomalies) and save storage space.",
+    "difficulty": "medium",
+    "topic": "Relational DB Design",
+    "category": "Database"
+  },
+  {
+    "id": 7,
+    "question": "Which SQL keyword is utilized to aggregate rows that have the same values into summary rows, often used with functions like COUNT(), MAX(), or AVG()?",
+    "options": ["DISTINCT", "GROUP BY", "ORDER BY", "HAVING"],
+    "correctIndex": 1,
+    "explanation": "GROUP BY is used to partition the result set into groups. For example, grouping 1,000 sales records by 'Category' to find the total revenue per category.",
+    "difficulty": "easy",
+    "topic": "SQL Aggregation",
+    "category": "Database"
+  },
+  {
+    "id": 8,
+    "question": "What is the difference between a 'Primary Key' and a 'Unique Key' in SQL?",
+    "options": ["There is no difference.", "A table can have only one Primary Key, and it cannot contain NULL values. A table can have multiple Unique Keys, and they can sometimes allow one NULL value.", "Primary keys are for numbers, unique keys are for text.", "Unique keys are faster than primary keys."],
+    "correctIndex": 1,
+    "explanation": "Primary keys uniquely identify each record and are mandatory for table structure. Unique keys also enforce uniqueness but allow for more flexibility with NULLs and multiple instances.",
+    "difficulty": "medium",
+    "topic": "Constraints",
+    "category": "Database"
+  },
+  {
+    "id": 9,
+    "question": "A database administrator wants to ensure that two users updating the same record at the exact same time do not overwrite each other's changes blindly. Which ACID property addresses this?",
+    "options": ["Atomicity", "Consistency", "Isolation", "Durability"],
+    "correctIndex": 2,
+    "explanation": "Isolation ensures that concurrent transactions are executed as if they were running sequentially. It uses locks or versioning (MVCC) to prevent interference between simultaneous updates.",
+    "difficulty": "hard",
+    "topic": "Transactions",
+    "category": "Database"
+  },
+  {
+    "id": 10,
+    "question": "What is a 'Database View' primarily used for?",
+    "options": ["To speed up the physical performance of the server.", "To provide a virtual, read-only table that represents the result of a stored query, simplifying complex JOINs for the user.", "To store large binary files like images.", "To automatically backup the database."],
+    "correctIndex": 1,
+    "explanation": "Views act as a security or abstraction layer. You can hide complex database schemas from a user by presenting them with a simple 'View' that joins three tables behind the scenes.",
+    "difficulty": "easy",
+    "topic": "DB Objects",
+    "category": "Database"
+  },
+  {
+    "id": 11,
+    "question": "Which database scaling technique involves splitting a single large database into multiple smaller chunks (shards) across different servers based on a key (like UserID)?",
+    "options": ["Vertical Scaling", "Replication", "Horizontal Sharding", "Indexing"],
+    "correctIndex": 2,
+    "explanation": "Sharding allows a database to handle massive traffic by distributing the load across many physical machines. Vertical scaling would just involve buying a bigger single server.",
+    "difficulty": "medium",
+    "topic": "Scaling",
+    "category": "Database"
+  },
+  {
+    "id": 12,
+    "question": "In the context of ACID properties, 'Durability' ensures that:",
+    "options": ["The database is consistently available 24/7.", "Once a transaction is committed, it remains permanently stored even in the event of a system failure or power loss.", "The data is valid according to all rules.", "No two users can edit the same row."],
+    "correctIndex": 1,
+    "explanation": "Durability is usually guaranteed by logging transactions to non-volatile storage (disk) before acknowledging the result to the user.",
+    "difficulty": "medium",
+    "topic": "Transactions",
+    "category": "Database"
+  },
+  {
+    "id": 13,
+    "question": "Which NoSQL category is most appropriate for a high-performance gaming leaderboard that needs to store simple 'UserID' to 'Score' mappings with sub-millisecond latency?",
+    "options": ["Document Store", "Graph Database", "Key-Value Store (like Redis)", "SQL Database"],
+    "correctIndex": 2,
+    "explanation": "Key-value stores are the simplest and fastest NoSQL databases. They excel at simple lookups and caching where complex relational queries are not needed.",
+    "difficulty": "easy",
+    "topic": "NoSQL Types",
+    "category": "Database"
+  },
+  {
+    "id": 14,
+    "question": "What is a 'Stored Procedure'?",
+    "options": ["A manual backup file.", "A prepared SQL code that you can save and reuse, allowing you to execute complex logic directly on the database engine for better performance.", "A type of table that store passwords.", "A browser plugin for SQL."],
+    "correctIndex": 1,
+    "explanation": "Stored procedures reduce network traffic because only the procedure call is sent, and the heavy logic executes on the server side close to the data.",
+    "difficulty": "medium",
+    "topic": "DB Objects",
+    "category": "Database"
+  },
+  {
+    "id": 15,
+    "question": "You need to retrieve the names of all employees who have NOT been assigned to any project yet. Which SQL JOIN type or clause combination is typically the most efficient for this?",
+    "options": ["INNER JOIN", "LEFT JOIN with a WHERE clause checking for NULL on the right side", "RIGHT JOIN", "CROSS JOIN"],
+    "correctIndex": 1,
+    "explanation": "A LEFT JOIN returns all rows from the left table (Employees). By checking if the joined ProjectID is NULL, you specifically find employees with no corresponding project record.",
+    "difficulty": "medium",
+    "topic": "SQL Joins",
+    "category": "Database"
+  },
+  {
+    "id": 16,
+    "question": "Which constraint ensures that every row in a table is uniquely identifiable and prevents any NULL values in that specific column?",
+    "options": ["CHECK", "DEFAULT", "PRIMARY KEY", "FOREIGN KEY"],
+    "correctIndex": 2,
+    "explanation": "A Primary Key combines the properties of 'Not Null' and 'Unique'. It is the cornerstone of relational database design.",
+    "difficulty": "easy",
+    "topic": "Constraints",
+    "category": "Database"
+  },
+  {
+    "id": 17,
+    "question": "A massive e-commerce system uses 'Database Replication'. Why do they maintain several read-only copies of the main database?",
+    "options": ["To make the website look more complex.", "To offload 'READ' traffic from the master database, allowing it to focus exclusively on 'WRITE' operations (Orders).", "To delete old data automatically.", "To encrypt the main server."],
+    "correctIndex": 1,
+    "explanation": "Master-Slave replication improves performance by allowing hundreds of concurrent users to read product data from clones, while the master handles the critical inventory updates.",
+    "difficulty": "hard",
+    "topic": "Scaling",
+    "category": "Database"
+  },
+  {
+    "id": 18,
+    "question": "What is the purpose of a 'Database Trigger'?",
+    "options": ["To start the server when it's turned off.", "To automatically execute a block of SQL code in response to specific events like INSERT, UPDATE, or DELETE on a table.", "To manually search for errors.", "To speed up the internet connection."],
+    "correctIndex": 1,
+    "explanation": "Triggers are often used for auditing (logging when a record changes) or enforcing complex business rules that simple constraints cannot handle.",
+    "difficulty": "medium",
+    "topic": "DB Objects",
+    "category": "Database"
+  },
+  {
+    "id": 19,
+    "question": "In MongoDB (a Document Store), data is stored in what format that closely resembles JSON?",
+    "options": ["XML", "BSON (Binary JSON)", "CSV", "YAML"],
+    "correctIndex": 1,
+    "explanation": "BSON is a binary-encoded serialization of JSON-like documents. It is faster to traverse and store than plain text JSON.",
+    "difficulty": "easy",
+    "topic": "NoSQL Formats",
+    "category": "Database"
+  },
+  {
+    "id": 20,
+    "question": "Which SQL command is used to remove all records from a table without deleting the table structure itself, and is typically faster than DELETE because it doesn't log individual row deletions?",
+    "options": ["DROP", "TRUNCATE", "REMOVE", "PURGE"],
+    "correctIndex": 1,
+    "explanation": "TRUNCATE effectively resets the table by deallocating the data pages. It is a DDL operation and is much faster for clearing large tables than a logged DELETE.",
+    "difficulty": "medium",
+    "topic": "SQL Commands",
+    "category": "Database"
+  },
+  {
+    "id": 21,
+    "question": "What does 'Referential Integrity' ensure in a relational database?",
+    "options": ["That the database is consistent with the real world.", "That relationships between tables remain consistent, preventing orphaned rows (e.g., you can't delete a customer who has existing orders).", "That the database is encrypted.", "That the database can store images."],
+    "correctIndex": 1,
+    "explanation": "Referential integrity is enforced by Foreign Keys. It keeps data linked correctly and prevents the creation of records that point to non-existent parent rows.",
+    "difficulty": "easy",
+    "topic": "Data Integrity",
+    "category": "Database"
+  },
+  {
+    "id": 22,
+    "question": "Which type of index is technically equivalent to the Primary Key and physically sorts the data rows on the disk based on the index key?",
+    "options": ["Non-Clustered Index", "Clustered Index", "Bitmap Index", "Full-Text Index"],
+    "correctIndex": 1,
+    "explanation": "A Clustered Index determines the physical order of data in the table. Because of this, a table can only have one clustered index (usually the Primary Key).",
+    "difficulty": "hard",
+    "topic": "Indexing",
+    "category": "Database"
+  },
+  {
+    "id": 23,
+    "question": "Imagine an 'Orders' table and a 'Products' table. To find the total revenue generated by each product, you must use which SQL combination?",
+    "options": ["JOIN and GROUP BY", "SELECT and ORDER BY", "WHERE and HAVING", "UNION and DISTINCT"],
+    "correctIndex": 0,
+    "explanation": "You JOIN the tables to link orders to product prices, and then use GROUP BY 'ProductName' with a SUM() function on the 'Price' column.",
+    "difficulty": "medium",
+    "topic": "SQL Logic",
+    "category": "Database"
+  },
+  {
+    "id": 24,
+    "question": "A developer wants to prevent unauthorized access to sensitive data in the database. Which concept involves restricting a user's permissions to only specific tables or views?",
+    "options": ["Encryption", "Authentication", "Authorization (Role-Based Access Control)", "Normalization"],
+    "correctIndex": 2,
+    "explanation": "Authorization (or RBAC) ensures that even if a user is authenticated (logged in), they can only touch the data the administrator has granted them 'SELECT' or 'UPDATE' rights for.",
+    "difficulty": "easy",
+    "topic": "Security",
+    "category": "Database"
+  },
+  {
+    "id": 25,
+    "question": "What is 'Deadlock' in a database environment?",
+    "options": ["When the server runs out of disk space.", "When two or more transactions are waiting for each other to release locks on the same data, preventing any from proceeding.", "When a user forgets their password.", "When the database is backed up."],
+    "correctIndex": 1,
+    "explanation": "Modern database engines (like SQL Server or MySQL) automatically detect deadlocks and 'kill' one of the transactions to allow the others to continue.",
+    "difficulty": "hard",
+    "topic": "Concurrency",
+    "category": "Database"
+  },
+  {
+    "id": 26,
+    "question": "Which SQL clause is used to filter results AFTER the GROUP BY clause has been applied?",
+    "options": ["WHERE", "HAVING", "ORDER BY", "LIMIT"],
+    "correctIndex": 1,
+    "explanation": "'WHERE' filters individual rows before grouping. 'HAVING' filters the summarized groups (e.g., 'HAVING SUM(Sales) > 1000').",
+    "difficulty": "medium",
+    "topic": "SQL Filtering",
+    "category": "Database"
+  },
+  {
+    "id": 27,
+    "question": "A social network uses a 'Graph Database'. What are the two primary components used to represent data in this model?",
+    "options": ["Tables and Rows", "Nodes (Entities) and Edges (Relationships)", "Keys and Values", "Documents and Collections"],
+    "correctIndex": 1,
+    "explanation": "In a graph DB, Nodes represent objects (like Users), and Edges represent relationships (like 'FOLLOWS' or 'FRIEND_OF'), which can have their own properties.",
+    "difficulty": "medium",
+    "topic": "NoSQL Architecture",
+    "category": "Database"
+  },
+  {
+    "id": 28,
+    "question": "What is the primary benefit of using 'Entity-Relationship (ER) Diagrams'?",
+    "options": ["They speed up the database queries.", "They provide a visual representation of the database schema, showing all tables, attributes, and how they connect before any code is written.", "They encrypt the database.", "They automatically generate the UI."],
+    "correctIndex": 1,
+    "explanation": "ER diagrams are essential for the design phase, helping stakeholders and developers agree on the logical structure of the data.",
+    "difficulty": "easy",
+    "topic": "DB Design",
+    "category": "Database"
+  },
+  {
+    "id": 29,
+    "question": "Which tool or technique creates a 'point-in-time' copy of the database that can be used for disaster recovery if the main data is corrupted?",
+    "options": ["Index", "Trigger", "Backup / Transaction Log", "View"],
+    "correctIndex": 2,
+    "explanation": "Backups (Full, Incremental, or Transaction Log) are the only way to recover data that has been accidentally deleted or corrupted by a logical error or hardware failure.",
+    "difficulty": "easy",
+    "topic": "Recovery",
+    "category": "Database"
+  },
+  {
+    "id": 30,
+    "question": "What is the 'CAP Theorem' in Distributed Databases?",
+    "options": ["A theorem about security.", "A principle stating that a distributed system can only provide two out of three guarantees: Consistency, Availability, and Partition Tolerance.", "A rule for naming databases.", "A performance metric."],
+    "correctIndex": 1,
+    "explanation": "CAP Theorem (Brewer's Theorem) is a fundamental tradeoff in distributed system design. For example, in a network failure, you must choose between staying available (A) or staying consistent (C).",
+    "difficulty": "hard",
+    "topic": "Distributed Systems",
+    "category": "Database"
+  }
+]
